@@ -1,0 +1,252 @@
+$bgColor: #000;
+$mainColor: #9E949C;
+$secColor: #F5EFF3;
+
+.overall{
+	position: absolute;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+}
+
+.blbl{
+	height: 100vh;
+	width: 15px;
+}
+
+.wrapper{
+	/* position: absolute; */
+	display: grid;
+	grid-template-columns: repeat(24, 1fr);
+	/* grid-template-rows: repeat(24, 10px); */
+	width: 100%;
+	height: 100vh;
+}
+
+.wrapper .column{
+	border: solid white 0.1px;
+	grid-gap: 0;
+}
+
+.wrapper .r{
+	border: solid white 0.1px;
+	grid-gap: 0;
+}
+// 
+
+*{
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	color: $secColor;
+}
+
+body{
+	background: $bgColor;
+	width: 100vw;
+}
+
+.main_color{
+	color: $mainColor;
+}
+
+h1{
+	font-family: "Editorial New";
+	font-size: 70px;
+	font-weight: 100;
+	font-style: normal;
+	line-height: 60px;
+	letter-spacing: -3px;
+	color: $mainColor;
+}
+
+h3{
+	font-family: "Editorial New";
+	font-size: 50px;
+	font-weight: 100;
+	font-style: normal;
+	line-height: 100px;
+	letter-spacing: -0.04em;
+	color: $mainColor;
+}
+
+h5{
+	font-family: "Helvetica Neue";
+	font-size: 18px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 20px;
+	color: $secColor;
+}
+
+a{
+	text-decoration: none;
+}
+
+.highcap{
+	text-transform: uppercase;
+}
+
+.smallcap{
+	font-family: "Helvetica Neue";
+	font-size: 13px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 20px;
+}
+
+.text{
+	font-family: "Helvetica Neue";
+	font-size: 15px;
+	font-weight: 300;
+	font-style: normal;
+	line-height: 20px;
+}
+
+header{
+	border-bottom: 1px $mainColor solid;
+	padding-top: 4.2vw;
+	.headerLogo{
+		margin-bottom: 1.8vw;
+	}
+}
+
+.mainPage{
+	display: flex;
+	flex-direction: row;
+}
+
+.container{
+	height: 100vh;
+	width: 83.9vw;
+	padding-left: 5.2vw;
+}
+
+.menu{
+	:hover{
+		cursor: pointer;
+	}
+	z-index: 10;
+	border-left: 1px $mainColor solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	h5{
+		display: inline-block;
+	}
+	.menu_top{
+		width: 100%;
+		.menu_blank{
+			width: 100%;
+			height: 4.44vh;
+			border-bottom: 1px $secColor solid;
+		}
+		.menu_title{
+			margin-top: 2.4vh;
+			// width: 100%;
+			// width: auto;
+		}
+	}
+}
+
+.menu_close{
+	width: 16.1vw;
+	.menu_items{
+		display: none;
+	}
+	.menu_title{
+		text-align: center;
+	}
+}
+
+.menu_open{
+	width: 26.6vw;
+	.menu_items{
+		display: block;
+		text-align: right;
+		margin-right: 5.2vw;
+	}
+	.menu_title{
+		margin-left: 15.5vw;
+	}
+}
+
+.menu_footer{
+	margin-bottom: 4.5vh;
+	.menu_design{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 2.5vh;
+		.ines{
+			text-decoration: underline;
+		}
+	}
+	.menu_find{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+// 
+
+.accueil_title{
+	display: inline-block;
+}
+
+.accueil_arrow{
+	margin: 0 16px;
+}
+
+.presentation_text{
+	display: inline-block;
+	color: $secColor;
+	width: 25vw;
+	margin-top: 4.4vh;
+}
+
+.horizontal_blank1{
+	display: block;
+	width: 100%;
+	height: 22vh;
+}
+
+.horizontal_blank2{
+	display: block;
+	width: 100%;
+	height: 11vh;
+}
+
+.contact_text{
+	display: inline-block;
+	color: $secColor;
+	width: 35.7vw;
+	margin-top: 4.4vh;
+}
+
+.contact_mail{
+	padding-left: 16.4vw;
+}
+
+
+// WORK
+
+.work_global{
+	z-index: -10;
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	border-left: $secColor 0.1px solid;
+	.work_project{
+		border-right: $secColor 0.1px solid;
+		width: 28.5vw;
+		.project_name{
+			margin-left: 3vw;
+			margin-right: 7vw;
+			margin-top: 5.5vh;
+			// display: inline;
+			// width: 260px;
+		}
+	}
+}
