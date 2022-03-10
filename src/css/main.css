@@ -1,3 +1,7 @@
+* ::-webkit-scrollbar {
+  display: none;
+}
+
 .overall {
   position: absolute;
   display: -webkit-box;
@@ -132,6 +136,13 @@ header .headerLogo {
 }
 
 .menu {
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  z-index: 100;
+  background: no-repeat url("../images/noir.jpg");
   z-index: 10;
   border-left: 1px #9E949C solid;
   display: -webkit-box;
@@ -171,6 +182,17 @@ header .headerLogo {
   margin-top: 2.4vh;
 }
 
+.menu .menu_top .menu_square {
+  display: inline-block;
+  width: 17px;
+  height: 12px;
+  margin-left: 16px;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
+}
+
 .menu_close {
   width: 16.1vw;
 }
@@ -194,7 +216,29 @@ header .headerLogo {
 }
 
 .menu_open .menu_title {
-  margin-left: 15.5vw;
+  text-align: right;
+  margin-right: 5.2vw;
+}
+
+.menu_open .menu_footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.menu_open .menu_footer .ines {
+  margin-top: 1.5vh;
+}
+
+.menu_open .menu_footer .find_media {
+  margin-top: 0.8vh;
 }
 
 .menu_footer {
@@ -226,12 +270,12 @@ header .headerLogo {
           flex-direction: column;
 }
 
-.accueil_title {
+.home_title {
   display: inline-block;
 }
 
-.accueil_arrow {
-  margin: 0 16px;
+.home_arrow {
+  margin: 0 1vw;
 }
 
 .presentation_text {
@@ -253,19 +297,7 @@ header .headerLogo {
   height: 11vh;
 }
 
-.contact_text {
-  display: inline-block;
-  color: #F5EFF3;
-  width: 35.7vw;
-  margin-top: 4.4vh;
-}
-
-.contact_mail {
-  padding-left: 16.4vw;
-}
-
-.work_global {
-  z-index: -10;
+.contact_intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,18 +305,32 @@ header .headerLogo {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  height: 100%;
-  border-left: #F5EFF3 0.1px solid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.work_global .work_project {
-  border-right: #F5EFF3 0.1px solid;
-  width: 28.5vw;
+.contact_intro .contact_text {
+  display: inline-block;
+  color: #F5EFF3;
+  width: 35.7vw;
+  margin-top: 4.4vh;
 }
 
-.work_global .work_project .project_name {
-  margin-left: 3vw;
-  margin-right: 7vw;
-  margin-top: 5.5vh;
+.contact_intro .contact_rows .row_init {
+  width: 38vw;
+  height: 1px;
+  margin-bottom: 6px;
+}
+
+.contact_intro .contact_rows .row {
+  width: 38vw;
+  height: 1px;
+  background: #9E949C;
+  margin-bottom: 7px;
+}
+
+.contact_mail {
+  padding-left: 16.4vw;
 }
 /*# sourceMappingURL=main.css.map */

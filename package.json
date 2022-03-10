@@ -1,0 +1,16 @@
+{
+  "name": "portfolio2022",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.3.2",
+    "parcel": "^2.3.2"
+  },
+  "dependencies": {
+    "@barba/core": "^2.9.7",
+    "gsap": "^3.9.1"
+  }
+}

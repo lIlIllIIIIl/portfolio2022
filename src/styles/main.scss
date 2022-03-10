@@ -2,6 +2,10 @@ $bgColor: #000;
 $mainColor: #9E949C;
 $secColor: #F5EFF3;
 
+* ::-webkit-scrollbar{
+	display: none;
+}
+
 .overall{
 	position: absolute;
 	display: flex;
@@ -123,6 +127,12 @@ header{
 }
 
 .menu{
+	transition-duration: 0.8s;
+	position: fixed;
+    right: 0;
+    height: 100vh;
+    z-index: 100;
+    background: no-repeat url("../images/noir.jpg");
 	:hover{
 		cursor: pointer;
 	}
@@ -147,6 +157,15 @@ header{
 			// width: 100%;
 			// width: auto;
 		}
+		.menu_square{
+			display: inline-block;
+			width: 17px;
+			height: 12px;
+			margin-left: 16px;
+			transition-duration: 0.8s;
+			border-top: solid 1px white;
+			border-bottom: solid 1px white;
+		}
 	}
 }
 
@@ -168,7 +187,21 @@ header{
 		margin-right: 5.2vw;
 	}
 	.menu_title{
-		margin-left: 15.5vw;
+		text-align: right;
+		margin-right: 5.2vw;
+	}
+	.menu_footer{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		width: 100%;
+		.ines{
+			margin-top: 1.5vh;
+		}
+		.find_media{
+			margin-top: 0.8vh;
+		}
+
 	}
 }
 
@@ -191,12 +224,12 @@ header{
 
 // 
 
-.accueil_title{
+.home_title{
 	display: inline-block;
 }
 
-.accueil_arrow{
-	margin: 0 16px;
+.home_arrow{
+	margin: 0 1vw;
 }
 
 .presentation_text{
@@ -218,13 +251,30 @@ header{
 	height: 11vh;
 }
 
-.contact_text{
-	display: inline-block;
-	color: $secColor;
-	width: 35.7vw;
-	margin-top: 4.4vh;
+.contact_intro{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.contact_text{
+		display: inline-block;
+		color: $secColor;
+		width: 35.7vw;
+		margin-top: 4.4vh;
+	}
+	.contact_rows{
+		.row_init{
+			width: 38vw;
+			height: 1px;
+			margin-bottom: 6px;
+		}
+		.row{
+			width: 38vw;
+			height: 1px;
+			background: $mainColor;
+			margin-bottom: 7px;
+		}
+	}
 }
-
 .contact_mail{
 	padding-left: 16.4vw;
 }
@@ -232,21 +282,3 @@ header{
 
 // WORK
 
-.work_global{
-	z-index: -10;
-	display: flex;
-	flex-direction: row;
-	height: 100%;
-	border-left: $secColor 0.1px solid;
-	.work_project{
-		border-right: $secColor 0.1px solid;
-		width: 28.5vw;
-		.project_name{
-			margin-left: 3vw;
-			margin-right: 7vw;
-			margin-top: 5.5vh;
-			// display: inline;
-			// width: 260px;
-		}
-	}
-}

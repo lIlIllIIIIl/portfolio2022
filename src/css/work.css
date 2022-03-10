@@ -1,0 +1,45 @@
+body {
+  scrollbar-width: none;
+  height: 172vh;
+}
+
+header {
+  border-bottom: none;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  z-index: 100;
+  background: no-repeat url("../images/noir.jpg");
+}
+
+.work_global {
+  z-index: -10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.work_global #works {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.work_global .work_project1 {
+  border-left: #F5EFF3 0.1px solid;
+}
+
+.work_global .work_project {
+  border-right: #F5EFF3 0.1px solid;
+  border-top: #F5EFF3 0.1px solid;
+}
+
+.work_global .work_project .project_name {
+  margin-left: 3vw;
+  margin-right: 7vw;
+  margin-top: 5.5vh;
+}
+/*# sourceMappingURL=work.css.map */

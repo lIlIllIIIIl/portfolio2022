@@ -1,0 +1,86 @@
+.about_image:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[162];
+      grid-template-columns: repeat(162, 1fr);
+  -ms-grid-rows: (1fr)[79];
+      grid-template-rows: repeat(79, 1fr);
+}
+
+.grid-item {
+  border: 1px solid white;
+  text-align: center;
+}
+
+.about_title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 27;
+  grid-column: 1/28;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.about_title h1 {
+  display: inline-block;
+}
+
+.about_game {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 49;
+  grid-column: 1/50;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  z-index: -100;
+}
+
+.about_manga {
+  -ms-grid-column: 51;
+  -ms-grid-column-span: 67;
+  grid-column: 51/118;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 13;
+  grid-row: 1/14;
+}
+
+.about_food {
+  -ms-grid-column: 119;
+  -ms-grid-column-span: 43;
+  grid-column: 119/162;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 42;
+  grid-row: 1/43;
+}
+
+.game_rows {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 49;
+  grid-column: 1/50;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: inherit;
+}
+
+.game_rows .game_row_first {
+  margin-top: 16px;
+  height: 1px;
+  background: #9E949C;
+}
+
+.game_rows .game_row {
+  height: 1px;
+  background: #9E949C;
+  margin-top: 13px;
+}
+/*# sourceMappingURL=about.css.map */
