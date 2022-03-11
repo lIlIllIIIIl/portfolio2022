@@ -72,7 +72,7 @@ h3 {
   font-size: 50px;
   font-weight: 100;
   font-style: normal;
-  line-height: 100px;
+  line-height: 60px;
   letter-spacing: -0.04em;
   color: #9E949C;
 }
@@ -160,6 +160,12 @@ header .headerLogo {
           align-items: center;
 }
 
+.menu .menu_items a {
+  display: block;
+  position: relative;
+  color: #9E949C;
+}
+
 .menu :hover {
   cursor: pointer;
 }
@@ -203,6 +209,13 @@ header .headerLogo {
 
 .menu_close .menu_title {
   text-align: center;
+}
+
+.underline_menu {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: #9E949C;
 }
 
 .menu_open {
@@ -268,6 +281,44 @@ header .headerLogo {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.menu .menu_items {
+  /* Fade in */
+}
+
+.menu .menu_items a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #9E949C;
+  opacity: 0;
+  -webkit-transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, -webkit-transform 300ms;
+  transition: opacity 300ms, transform 300ms;
+  transition: opacity 300ms, transform 300ms, -webkit-transform 300ms;
+}
+
+.menu .menu_items a:hover::after,
+.menu .menu_items a:focus::after {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 2em, 0);
+          transform: translate3d(0, 2em, 0);
+}
+
+.menu .menu_items a::after {
+  opacity: 1;
+  -webkit-transform: translate3d(200%, 0, 0);
+          transform: translate3d(200%, 0, 0);
+}
+
+.menu .menu_items a:hover::after,
+.menu .menu_items a:focus::after {
+  -webkit-transform: translate3d(65%, 0, 0);
+          transform: translate3d(65%, 0, 0);
 }
 
 .home_title {
