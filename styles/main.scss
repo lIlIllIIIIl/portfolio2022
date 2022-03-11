@@ -104,8 +104,12 @@ a{
 }
 
 header{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 13.48vh;
 	border-bottom: 1px $mainColor solid;
-	padding-top: 4.2vw;
+	// padding-top: 4.2vw;
 	.headerLogo{
 		margin-bottom: 2.2vh;
 	}

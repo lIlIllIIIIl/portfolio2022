@@ -1,9 +1,14 @@
 .a {
   width: 100%;
+  position: relative;
+  height: 86.52vh;
 }
 
 .b {
   position: absolute;
+  width: 78.75vw;
+  top: 0;
+  right: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,6 +19,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -32,6 +40,9 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -43,6 +54,10 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .e {
@@ -52,6 +67,10 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 60px;
 }
 
@@ -65,6 +84,42 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-top: 188px;
+  margin-bottom: 42px;
+}
+
+.image_game {
+  width: 30.59%;
+  height: auto;
+}
+
+.image_manga {
+  width: 41.96%;
+  height: auto;
+}
+
+.image_food {
+  width: 27.4%;
+  height: auto;
+}
+
+.image_music {
+  width: 26.89%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.image_snow {
+  width: 26.62%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.image_japan {
+  width: 30.06%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 /*# sourceMappingURL=about.css.map */
