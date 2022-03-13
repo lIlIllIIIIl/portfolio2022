@@ -72,7 +72,7 @@ h3 {
   font-size: 50px;
   font-weight: 100;
   font-style: normal;
-  line-height: 60px;
+  line-height: 62px;
   letter-spacing: -0.04em;
   color: #9E949C;
 }
@@ -111,12 +111,22 @@ a {
 }
 
 header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  height: 13.48vh;
   border-bottom: 1px #9E949C solid;
-  padding-top: 4.2vw;
 }
 
 header .headerLogo {
-  margin-bottom: 1.8vw;
+  margin-bottom: 2.2vh;
 }
 
 .mainPage {
@@ -164,6 +174,7 @@ header .headerLogo {
   display: block;
   position: relative;
   color: #9E949C;
+  margin-bottom: 1vh;
 }
 
 .menu :hover {
@@ -226,6 +237,8 @@ header .headerLogo {
   display: block;
   text-align: right;
   margin-right: 5.2vw;
+  margin-top: 9.3vh;
+  margin-bottom: 2.5vh;
 }
 
 .menu_open .menu_title {
@@ -303,7 +316,7 @@ header .headerLogo {
 }
 
 .menu .menu_items a:hover::after,
-.menu .menu_items a:focus::after {
+.menu .menu_items a::after {
   opacity: 1;
   -webkit-transform: translate3d(0, 2em, 0);
           transform: translate3d(0, 2em, 0);

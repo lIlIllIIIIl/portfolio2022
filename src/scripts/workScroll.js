@@ -1,6 +1,6 @@
 const { gsap } = require("gsap/dist/gsap");
 const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
-    
+
 gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 

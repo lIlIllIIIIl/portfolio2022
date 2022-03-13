@@ -37,6 +37,13 @@ header {
   border-top: #F5EFF3 0.1px solid;
 }
 
+.work_global .work_project img {
+  height: 64vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .work_global .work_project .project_name {
   margin-left: 3vw;
   margin-right: 7vw;

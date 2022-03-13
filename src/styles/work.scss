@@ -3,35 +3,39 @@ $mainColor: #9E949C;
 $secColor: #F5EFF3;
 
 body {
-    scrollbar-width: none;
-    height: 172vh;
+	scrollbar-width: none;
+	height: 172vh;
 }
 
 header{
-    border-bottom: none
+	border-bottom: none
 }
-
 .menu{
-    position: fixed;
-    right: 0;
-    height: 100vh;
-    z-index: 100;
-    background: no-repeat url("../images/noir.jpg");
+	position: fixed;
+	right: 0;
+	height: 100vh;
+	z-index: 100;
+	background: no-repeat url("../images/noir.jpg");
 }
 
 .work_global{
-    #works{
-        display: flex;
-    }
+	#works{
+		display: flex;
+		// height: 86.52vh;
+	}
 	z-index: -10;
 	display: flex;
-    .work_project1{
-        border-left: $secColor 0.1px solid;
-    }
+	.work_project1{
+		border-left: $secColor 0.1px solid;
+	}
 	.work_project{
 		border-right: $secColor 0.1px solid;
 		border-top: $secColor 0.1px solid;
 		// width: 28.5vw;
+		img{
+			height: 64vh;
+			width: fit-content	;
+		}
 		.project_name{
 			margin-left: 3vw;
 			margin-right: 7vw;
