@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="../css/main.css">
 </head>
 <body class="mainPage">
-	<section class="container">
+	<section class="container" id="page">
 		<header>
 			<svg class="headerLogo" width="52" height="38" viewBox="0 0 52 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M27.1113 33.7983L16.3972 0H14.9997L4.37879 33.7983C3.49372 36.5225 2.70181 37.0304 0 37.0304V38H9.5495V37.0304C5.07754 37.0304 5.1707 36.4763 6.0092 33.7983L8.43151 26.0413H21.3816L23.8505 33.7983C24.6889 36.4763 24.7821 37.0304 20.3567 37.0304V38H31.4901V37.0304C28.7882 37.0304 27.9963 36.5225 27.1113 33.7983ZM8.89734 24.4714L14.8134 5.58688H14.9531L20.9157 24.4714H8.89734Z" fill="#9E949C"/>
@@ -18,29 +18,38 @@
 			</svg>
 		</header>
 
-		<div class="aboutPage">
-			<div class="aboutRow1">
-				<div class="div_game">
-					<img class="image_game" src="../images/about/game.jpg">
-					<span class="about_title">
-						<h1>About me?</h1>
-						<svg class="accueil_arrow" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M0.924999 37.075L37 1" stroke="#9E949C" stroke-width="2"/>
-							<path d="M37 38L37 1L-4.76837e-07 0.999998" stroke="#9E949C" stroke-width="2"/>
-						</svg>
-					</span>
+		<div class="aboutPage" id="aboutPage">
+			<div class="about_row-1">
+				<div class="about_game-title">
+					<div class="div_game">
+							<div class="game_hover"></div>
+							<img class="image_game" src="../images/about/game.jpg">
+						</div>
+						<span class="about_title">
+							<h1>About me?</h1>
+							<svg class="accueil_arrow" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M0.924999 37.075L37 1" stroke="#9E949C" stroke-width="2"/>
+								<path d="M37 38L37 1L-4.76837e-07 0.999998" stroke="#9E949C" stroke-width="2"/>
+							</svg>
+						</span>
 				</div>
 				<div class="div_manga">
-					<img class="image_manga" src="../images/about/manga.jpg">
+					<div class="manga_image_hover">
+						<div class="manga_hover"></div>
+						<img class="image_manga" src="../images/about/manga.jpg">
+					</div>
 					<div class="manga_bot_columns">
 						<span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span><span class="manga_bot_column"></span>
 					</div>
 				</div>
 				<div class="div_food">
-					<img class="img image_food" src="../images/about/food.jpg">
+					<div class="food_image_hover">
+						<div class="food_hover"></div>
+						<img class="img image_food" src="../images/about/food.jpg">
+					</div>
 				</div>
 			</div>
-			<div class="aboutRow2">
+			<div class="about_row-2">
 				<div class="music_left_columns">
 					<span class="music_left_column"></span>
 					<span class="music_left_column"></span>
@@ -125,6 +134,7 @@
 			</div>
 		</div>
 	</section>
+	<script type="text/javascript" src="../scripts/about.js"></script>
 	<script type="text/javascript" src="../scripts/menu.js"></script>
 </body>
 </html>

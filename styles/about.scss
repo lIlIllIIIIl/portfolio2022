@@ -8,7 +8,7 @@ $secColor: #F5EFF3;
 	// height: 90vh;
 	height: 87.78vh;
 
-	.aboutRow1{
+	.about_row-1{
 		position: absolute;
 		width: 78.75vw;
 		top: 0;
@@ -20,7 +20,7 @@ $secColor: #F5EFF3;
 		flex-wrap: wrap;
 	}
 
-	.aboutRow2{
+	.about_row-2{
 		position: absolute;
 		width: 78.75vw;
 		bottom: 0;
@@ -32,21 +32,47 @@ $secColor: #F5EFF3;
 	}
 }
 
-.div_game{
+.about_game-title{
 	width: 30.59%;
 	max-width: 347px;
-	height: auto;
+	height: auto;	
 	display: flex;
 	flex-direction: column;
+}
+.div_game{
+	// width: 30.59%;
+	max-width: 347px;
+	height: auto;	
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	cursor: pointer;
+	.game_hover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		.game_row{
+			width: 100%;
+			height: 1px;
+			background: $mainColor;
+			display: none;
+		}
+	}
 	.image_game{
 		border-bottom: 1px solid $mainColor;
 		border-left: 1px solid $mainColor;
 	}
-	.about_title{
-		display: flex;
-		flex-direction: row;
-		margin-top: 5.5vh;
-	}
+
+}
+.about_title{
+	display: flex;
+	flex-direction: row;
+	margin-top: 5.5vh;
 }
 
 .div_manga{
@@ -57,6 +83,32 @@ $secColor: #F5EFF3;
 	flex-direction: column;
 	border-left: 1px solid $mainColor;
 	border-right: 1px solid $mainColor;
+	cursor: pointer;
+	.manga_image_hover{
+		display: flex;
+		position: relative;
+		.manga_hover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			.manga_row{
+				width: 100%;
+				height: 1px;
+				background: $mainColor;
+				// display: none;
+				z-index: 100;
+			}
+		}
+		.image_manga{
+			width: -webkit-fill-available;
+			// border-right: 1px solid $mainColor;
+		}
+	}
 	.manga_bot_columns{
 		z-index: -2;
 		display: flex;
@@ -80,6 +132,30 @@ $secColor: #F5EFF3;
 	display: flex;
 	flex-direction: column;
 	border-bottom: 1px solid $mainColor;
+	.food_image_hover{
+		display: flex;
+		position: relative;
+		.food_hover{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-evenly;
+			.food_column{
+				width: 1px;
+				height: 100%;
+				background: $mainColor;
+				// display: none;
+			}
+		}
+		.image_food{
+			width: -webkit-fill-available;
+			// border-right: 1px solid $mainColor;
+		}
+	}
 }
 
 .music_left_columns{
@@ -209,3 +285,5 @@ $secColor: #F5EFF3;
 img:hover{
 	cursor: pointer;
 }
+
+

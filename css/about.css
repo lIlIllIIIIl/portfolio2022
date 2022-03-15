@@ -4,7 +4,7 @@
   height: 87.78vh;
 }
 
-.aboutPage .aboutRow1 {
+.aboutPage .about_row-1 {
   position: absolute;
   width: 78.75vw;
   top: 0;
@@ -26,7 +26,7 @@
       flex-wrap: wrap;
 }
 
-.aboutPage .aboutRow2 {
+.aboutPage .about_row-2 {
   position: absolute;
   width: 78.75vw;
   bottom: 0;
@@ -47,7 +47,7 @@
       flex-wrap: wrap;
 }
 
-.div_game {
+.about_game-title {
   width: 30.59%;
   max-width: 347px;
   height: auto;
@@ -60,12 +60,51 @@
           flex-direction: column;
 }
 
+.div_game {
+  max-width: 347px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  cursor: pointer;
+}
+
+.div_game .game_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.div_game .game_hover .game_row {
+  width: 100%;
+  height: 1px;
+  background: #9E949C;
+  display: none;
+}
+
 .div_game .image_game {
   border-bottom: 1px solid #9E949C;
   border-left: 1px solid #9E949C;
 }
 
-.div_game .about_title {
+.about_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,6 +128,43 @@
           flex-direction: column;
   border-left: 1px solid #9E949C;
   border-right: 1px solid #9E949C;
+  cursor: pointer;
+}
+
+.div_manga .manga_image_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.div_manga .manga_image_hover .manga_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.div_manga .manga_image_hover .manga_hover .manga_row {
+  width: 100%;
+  height: 1px;
+  background: #9E949C;
+  z-index: 100;
+}
+
+.div_manga .manga_image_hover .image_manga {
+  width: -webkit-fill-available;
 }
 
 .div_manga .manga_bot_columns {
@@ -126,6 +202,41 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-bottom: 1px solid #9E949C;
+}
+
+.div_food .food_image_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.div_food .food_image_hover .food_hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.div_food .food_image_hover .food_hover .food_column {
+  width: 1px;
+  height: 100%;
+  background: #9E949C;
+}
+
+.div_food .food_image_hover .image_food {
+  width: -webkit-fill-available;
 }
 
 .music_left_columns {
@@ -332,5 +443,9 @@
   width: 100%;
   height: 1px;
   background: #9E949C;
+}
+
+img:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=about.css.map */
