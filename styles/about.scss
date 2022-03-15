@@ -42,15 +42,16 @@ $secColor: #F5EFF3;
 .div_game{
 	// width: 30.59%;
 	max-width: 347px;
-	height: auto;	
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	position: relative;
 	cursor: pointer;
+	overflow: hidden;
 	.game_hover{
 		position: absolute;
 		top: 0;
-		left: 0;
+		left: -100%;
 		width: 100%;
 		height: 100%;
 		display: flex;
@@ -60,7 +61,9 @@ $secColor: #F5EFF3;
 			width: 100%;
 			height: 1px;
 			background: $mainColor;
-			display: none;
+			// display: none;
+			transition-duration: 0.3s;
+
 		}
 	}
 	.image_game{
@@ -87,9 +90,10 @@ $secColor: #F5EFF3;
 	.manga_image_hover{
 		display: flex;
 		position: relative;
+		overflow: hidden;
 		.manga_hover{
 			position: absolute;
-			top: 0;
+			top: 100%;
 			left: 0;
 			width: 100%;
 			height: 100%;
@@ -100,8 +104,8 @@ $secColor: #F5EFF3;
 				width: 1px;
 				height: 100%;
 				background: $mainColor;
-				display: none;
-				z-index: 100;
+				z-index: 10;
+				transition-duration: 0.3s;
 			}
 		}
 		.image_manga{
@@ -133,13 +137,14 @@ $secColor: #F5EFF3;
 	flex-direction: column;
 	border-bottom: 1px solid $mainColor;
 	cursor: pointer;
+	overflow: hidden;
 	.food_image_hover{
 		display: flex;
 		position: relative;
 		.food_hover{
 			position: absolute;
 			top: 0;
-			left: 0;
+			left: -100%;
 			width: 100%;
 			height: 100%;
 			display: flex;
@@ -149,7 +154,7 @@ $secColor: #F5EFF3;
 				width: 100%;
 				height: 1px;
 				background: $mainColor;
-				// display: none;
+				transition-duration: 0.3s;
 			}
 		}
 		.image_food{
