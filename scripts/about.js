@@ -17,7 +17,7 @@ const food = pageAbout.querySelector(".div_food")
 const foodImage = food.querySelector(".image_food")
 const foodHover = food.querySelector(".food_hover")
 
-const foodRowNum = Math.round(foodImage.clientWidth/7);
+const foodRowNum = Math.round(foodImage.clientHeight/14)-1;
 
 
 
@@ -46,6 +46,7 @@ createHoverLines()
 
 let gameRows = game.querySelectorAll(".game_row")
 let mangaColumns = manga.querySelectorAll(".manga_column")
+let foodRows = manga.querySelectorAll(".food_row")
 
 gameHover.addEventListener("mouseenter", () =>{
     for (let row of gameRows){
@@ -65,6 +66,17 @@ mangaHover.addEventListener("mouseenter", () =>{
 })
 mangaHover.addEventListener("mouseleave", () =>{
     for (let column of mangaColumns){
-        // column.style.display = "none"
+        column.style.display = "none"
+    }
+})
+
+foodHover.addEventListener("mouseenter", () =>{
+    for (let row of foodRows){
+        row.style.display = "inline"
+    }
+})
+foodHover.addEventListener("mouseleave", () =>{
+    for (let row of foodRows){
+        row.style.display = "none"
     }
 })

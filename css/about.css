@@ -156,10 +156,11 @@
           justify-content: space-evenly;
 }
 
-.div_manga .manga_image_hover .manga_hover .manga_row {
-  width: 100%;
-  height: 1px;
+.div_manga .manga_image_hover .manga_hover .manga_column {
+  width: 1px;
+  height: 100%;
   background: #9E949C;
+  display: none;
   z-index: 100;
 }
 
@@ -202,6 +203,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   border-bottom: 1px solid #9E949C;
+  cursor: pointer;
 }
 
 .div_food .food_image_hover {
@@ -220,18 +222,18 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-.div_food .food_image_hover .food_hover .food_column {
-  width: 1px;
-  height: 100%;
+.div_food .food_image_hover .food_hover .food_row {
+  width: 100%;
+  height: 1px;
   background: #9E949C;
 }
 

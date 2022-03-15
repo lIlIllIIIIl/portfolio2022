@@ -96,11 +96,11 @@ $secColor: #F5EFF3;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
-			.manga_row{
-				width: 100%;
-				height: 1px;
+			.manga_column{
+				width: 1px;
+				height: 100%;
 				background: $mainColor;
-				// display: none;
+				display: none;
 				z-index: 100;
 			}
 		}
@@ -132,6 +132,7 @@ $secColor: #F5EFF3;
 	display: flex;
 	flex-direction: column;
 	border-bottom: 1px solid $mainColor;
+	cursor: pointer;
 	.food_image_hover{
 		display: flex;
 		position: relative;
@@ -142,11 +143,11 @@ $secColor: #F5EFF3;
 			width: 100%;
 			height: 100%;
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			justify-content: space-evenly;
-			.food_column{
-				width: 1px;
-				height: 100%;
+			.food_row{
+				width: 100%;
+				height: 1px;
 				background: $mainColor;
 				// display: none;
 			}
