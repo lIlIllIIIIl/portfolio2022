@@ -6,7 +6,6 @@ const gameHover = game.querySelector(".game_hover")
 
 const gameRowNum = Math.round(gameImage.clientHeight/14)-1;
 
-
 const manga = pageAbout.querySelector(".div_manga")
 const mangaImage = manga.querySelector(".image_manga")
 const mangaHover = manga.querySelector(".manga_hover")
@@ -48,56 +47,163 @@ let gameRows = game.querySelectorAll(".game_row")
 let mangaColumns = manga.querySelectorAll(".manga_column")
 let foodRows = food.querySelectorAll(".food_row")
 
+function placeHoriz(elem){
+	console.log("hoverHoriz " + elem.classList[0]);
+	elem.style.display = "flex"
+	elem.style.transform = "translate(100%)"
+}
 function replaceHoriz(elem){
-	elem.style.display = "none"
-	elem.style.transform = "translate(-100%)"
+	console.log("leaveHoriz " + elem.classList[0]);
+	elem.style.transform = "translate(200%)"
+}
+function initHoriz(elem){
+	console.log("initHoriz " + elem.classList[0]);
+	// elem.style.display = "none"
+	elem.style.transform = "translate(0)"
+}
+
+function placeVert(elem){
+	console.log("hoverVert " + elem.classList[0]);
+	elem.style.display = "flex"
+	elem.style.transform = "translateY(-100%)"
 }
 function replaceVert(elem){
+	console.log("leaveVert " + elem.classList[0]);
+	elem.style.transform = "translateY(-200%)"
+}
+function initVert(elem){
+	console.log("initVert " + elem.classList[0]);
 	elem.style.display = "none"
 	elem.style.transform = "translateY(100%)"
 }
+
 function display(elem){
-	elem.style.display = "inline"
+	elem.style.display = "flex"
 }
-	// NE PAS DEPLACER LES LIGNES UNE PAR UNE MAIS TTE LA DIV
-game.addEventListener("mouseenter", () =>{
-	for (let row of gameRows){
-		// row.style.display = "inline"
-		// row.style.transform = "translate(100%)"
-	}
+function undisplay(elem){
+	elem.style.display = "none"
+}
+
+manga.addEventListener("mouseleave", () =>{
+	replaceHoriz(gameHover)
+	setTimeout(undisplay, 180,gameHover)
+	setTimeout(initHoriz, 200,gameHover)
+	setTimeout(display, 300,gameHover)
+
+	replaceHoriz(foodHover)
+	setTimeout(undisplay, 180,foodHover)
+	setTimeout(initHoriz, 200,foodHover)
+	setTimeout(display, 300,foodHover)
 })
-game.addEventListener("mouseleave", () =>{
-	for (let row of gameRows){
-		row.style.transform = "translate(200%)"
-		setTimeout(replaceHoriz, 300, row)
-		setTimeout(display, 400, row)
-	}
+
+food.addEventListener("mouseleave", () =>{
+	replaceHoriz(gameHover)
+	setTimeout(undisplay, 180,gameHover)
+	setTimeout(initHoriz, 200,gameHover)
+	setTimeout(display, 300,gameHover)
+
+	replaceVert(mangaHover)
+	setTimeout(undisplay, 180,mangaHover)
+	setTimeout(initVert, 200,mangaHover)
+	setTimeout(display, 300,mangaHover)
 })
 
 manga.addEventListener("mouseenter", () =>{
-	for (let column of mangaColumns){
-		// column.style.display = "inline"
-		// column.style.transform = "translateY(-100%)"
-	}
-})
-manga.addEventListener("mouseleave", () =>{
-	for (let column of mangaColumns){
-		column.style.transform = "translateY(-200%)"
-		setTimeout(replaceVert, 300, column)
-		setTimeout(display, 400, column)
-	}
+	setTimeout(placeHoriz, 300, gameHover)
+	// placeHoriz(gameHover)
+	setTimeout(placeHoriz, 300, foodHover)
+	// placeHoriz(foodHover)
 })
 
+
 food.addEventListener("mouseenter", () =>{
-	for (let row of foodRows){
-		// row.style.display = "inline"
-		// row.style.transform = "translate(100%)"
-	}
+	setTimeout(placeHoriz, 300, gameHover)
+	// placeHoriz(gameHover)
+	setTimeout(placeVert, 300, mangaHover)
+	// placeVert(mangaHover)
 })
-food.addEventListener("mouseleave", () =>{
-	for (let row of foodRows){
-		row.style.transform = "translate(200%)"
-		setTimeout(replaceHoriz, 300, row)
-		setTimeout(display, 400, row)
-	}
-})
+
+
+
+// game.addEventListener("mouseleave", () =>{
+// 	replaceHoriz(foodHover)
+// 	setTimeout(display, 400, foodHover)
+	
+// 	replaceHoriz(gameHover)
+// 	setTimeout(display, 400, gameHover)
+
+// 	replaceVert(mangaHover)
+// 	setTimeout(display, 400, mangaHover)
+// })
+// manga.addEventListener("mouseleave", () =>{
+// 	console.log("manga leave");
+
+// 	replaceHoriz(foodHover)
+// 	setTimeout(display, 400, foodHover)
+	
+// 	replaceHoriz(gameHover)
+// 	setTimeout(display, 400, gameHover)
+
+// 	replaceVert(mangaHover)
+// 	setTimeout(display, 400, mangaHover)
+// })
+// food.addEventListener("mouseleave", () =>{
+// 	console.log("food leave");
+
+// 	replaceHoriz(foodHover)
+// 	initHoriz(foodHover)
+// 	setTimeout(display, 400, foodHover)
+	
+// 	replaceHoriz(gameHover)
+// 	setTimeout(display, 400, gameHover)
+	
+// 	replaceVert(mangaHover)
+// 	setTimeout(display, 400, mangaHover)
+// })
+
+
+// game.addEventListener("mouseover", () =>{
+// 	placeVert(mangaHover)
+// 	placeHoriz(foodHover)
+// 	console.log("game enter");
+// })
+// manga.addEventListener("mouseover", () =>{
+// 	console.log("manga enter");
+
+// 	// placeHoriz(gameHover)
+// 	// placeHoriz(foodHover)
+// 	setTimeout(placeHoriz, 10, gameHover)
+// 	setTimeout(placeHoriz, 10, foodHover)
+// })
+// food.addEventListener("mouseover", () =>{
+// 	console.log("food enter");
+
+// 	setTimeout(placeHoriz, 10, gameHover)
+// 	setTimeout(placeVert, 10, mangaHover)
+// 	// placeHoriz(gameHover)
+// 	// placeVert(mangaHover)
+// })
+
+  function goUp(elem) {
+	return new Promise( (resolve) => { 
+		console.log("promise go");
+		elem.style.display = "flex"
+		elem.style.transform = "translateY(-100%)"
+		resolve(true)
+	})
+}
+
+  function goDown(elem) {
+	return new Promise( (resolve) => { 
+		console.log("promise 2 go");
+		elem.style.display = "flex"
+		elem.style.transform = "translateY(0%)"
+		resolve(true)
+	})
+}
+
+// goUp(mangaHover)
+	// .then((resolve) => console.log(resolve))
+	// .then(goDown(mangaHover))
+	// .then((resolve) => console.log(resolve)))
+// goUp(mangaHover).then(goDown(mangaHover))

@@ -91,14 +91,15 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .div_game .game_hover .game_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  display: inline;
 }
 
 .div_game .image_game {
@@ -157,6 +158,8 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 
 .div_manga .manga_image_hover .manga_hover .manga_column {
@@ -164,8 +167,7 @@
   height: 100%;
   background: #9E949C;
   z-index: 10;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  display: inline;
 }
 
 .div_manga .manga_image_hover .image_manga {
@@ -173,7 +175,7 @@
 }
 
 .div_manga .manga_bot_columns {
-  z-index: -2;
+  z-index: -20;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,14 +236,16 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  z-index: 100;
 }
 
 .div_food .food_image_hover .food_hover .food_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
+  display: inline;
 }
 
 .div_food .food_image_hover .image_food {
@@ -452,6 +456,10 @@
   width: 100%;
   height: 1px;
   background: #9E949C;
+}
+
+.div[class$="_hover"] {
+  z-index: 4;
 }
 
 img:hover {

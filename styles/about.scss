@@ -57,12 +57,12 @@ $secColor: #F5EFF3;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-evenly;
+		transition-duration: 0.3s;
 		.game_row{
 			width: 100%;
 			height: 1px;
 			background: $mainColor;
-			// display: none;
-			transition-duration: 0.3s;
+			display: inline;
 
 		}
 	}
@@ -100,12 +100,13 @@ $secColor: #F5EFF3;
 			display: flex;
 			flex-direction: row;
 			justify-content: space-evenly;
+			transition-duration: 0.3s;
 			.manga_column{
 				width: 1px;
 				height: 100%;
 				background: $mainColor;
 				z-index: 10;
-				transition-duration: 0.3s;
+				display: inline;
 			}
 		}
 		.image_manga{
@@ -114,7 +115,7 @@ $secColor: #F5EFF3;
 		}
 	}
 	.manga_bot_columns{
-		z-index: -2;
+		z-index: -20;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -150,11 +151,13 @@ $secColor: #F5EFF3;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-evenly;
+			transition-duration: 0.3s;
+			z-index: 100;
 			.food_row{
 				width: 100%;
 				height: 1px;
 				background: $mainColor;
-				transition-duration: 0.3s;
+				display: inline;
 			}
 		}
 		.image_food{
@@ -286,6 +289,10 @@ $secColor: #F5EFF3;
 		background: $mainColor;
 		// margin-bottom: 1.46vh;
 	}
+}
+
+.div[class$="_hover"]{
+	z-index: 4;
 }
 
 img:hover{
