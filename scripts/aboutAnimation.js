@@ -36,7 +36,6 @@ const japanHover = japan.querySelector(".japan_hover")
 
 const japanRowNum = Math.round(japanImage.clientWidth/14);
 
-
 function createHoverLines (){
 	for (i = 0 ; i < gameRowNum ; i++){
 		let newSpan = document.createElement("span")
@@ -116,104 +115,104 @@ function initVert(elem){
 	elem.style.transform = "translateY(0)"
 }
 
-manga.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, foodHover)
-	setTimeout(hoverHoriz, 350, gameHover)
-	setTimeout(hoverHoriz, 350, japanHover)
-	setTimeout(hoverVert, 350, musicHover, "-")
-	setTimeout(hoverVert, 350, snowHover, "+")
-})
+// manga.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, foodHover)
+// 	setTimeout(hoverHoriz, 350, gameHover)
+// 	setTimeout(hoverHoriz, 350, japanHover)
+// 	setTimeout(hoverVert, 350, musicHover, "-")
+// 	setTimeout(hoverVert, 350, snowHover, "+")
+// })
 
-manga.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(japanHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// manga.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(japanHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })
 
-music.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, foodHover)
-	setTimeout(hoverHoriz, 350, gameHover)
-	setTimeout(hoverHoriz, 350, japanHover)
-	setTimeout(hoverVert, 350, mangaHover, "-")
-	setTimeout(hoverVert, 350, snowHover, "+")
-})
+// music.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, foodHover)
+// 	setTimeout(hoverHoriz, 350, gameHover)
+// 	setTimeout(hoverHoriz, 350, japanHover)
+// 	setTimeout(hoverVert, 350, mangaHover, "-")
+// 	setTimeout(hoverVert, 350, snowHover, "+")
+// })
 
-music.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(japanHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// music.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(japanHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })
 
-snow.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, foodHover)
-	setTimeout(hoverHoriz, 350, gameHover)
-	setTimeout(hoverHoriz, 350, japanHover)
-	setTimeout(hoverVert, 350, mangaHover, "-")
-	setTimeout(hoverVert, 350, musicHover, "-")
-})
+// snow.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, foodHover)
+// 	setTimeout(hoverHoriz, 350, gameHover)
+// 	setTimeout(hoverHoriz, 350, japanHover)
+// 	setTimeout(hoverVert, 350, mangaHover, "-")
+// 	setTimeout(hoverVert, 350, musicHover, "-")
+// })
 
-snow.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(japanHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// snow.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(japanHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })
 
-food.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, gameHover)
-	setTimeout(hoverHoriz, 350, japanHover)
-	setTimeout(hoverVert, 350, mangaHover, "-")
-	setTimeout(hoverVert, 350, musicHover, "-")
-	setTimeout(hoverVert, 350, snowHover, "+")
-})
+// food.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, gameHover)
+// 	setTimeout(hoverHoriz, 350, japanHover)
+// 	setTimeout(hoverVert, 350, mangaHover, "-")
+// 	setTimeout(hoverVert, 350, musicHover, "-")
+// 	setTimeout(hoverVert, 350, snowHover, "+")
+// })
 
-food.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(japanHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// food.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(japanHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })
 
-game.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, foodHover)
-	setTimeout(hoverHoriz, 350, japanHover)
-	setTimeout(hoverVert, 350, mangaHover, "-")
-	setTimeout(hoverVert, 350, musicHover, "-")
-	setTimeout(hoverVert, 350, snowHover, "+")
-})
+// game.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, foodHover)
+// 	setTimeout(hoverHoriz, 350, japanHover)
+// 	setTimeout(hoverVert, 350, mangaHover, "-")
+// 	setTimeout(hoverVert, 350, musicHover, "-")
+// 	setTimeout(hoverVert, 350, snowHover, "+")
+// })
 
-game.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(japanHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// game.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(japanHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })
 
-japan.addEventListener("mouseenter", () =>{
-	setTimeout(hoverHoriz, 350, foodHover)
-	setTimeout(hoverHoriz, 350, gameHover)
-	setTimeout(hoverVert, 350, mangaHover, "-")
-	setTimeout(hoverVert, 350, musicHover, "-")
-	setTimeout(hoverVert, 350, snowHover, "+")
-})
+// japan.addEventListener("mouseenter", () =>{
+// 	setTimeout(hoverHoriz, 350, foodHover)
+// 	setTimeout(hoverHoriz, 350, gameHover)
+// 	setTimeout(hoverVert, 350, mangaHover, "-")
+// 	setTimeout(hoverVert, 350, musicHover, "-")
+// 	setTimeout(hoverVert, 350, snowHover, "+")
+// })
 
-japan.addEventListener("mouseleave", () =>{
-	fullAnimHoriz(foodHover)
-	fullAnimHoriz(gameHover)
-	fullAnimHoriz(gameHover)
-	fullAnimVert(mangaHover, "-")
-	fullAnimVert(musicHover, "-")
-	fullAnimVert(snowHover, "+")
-})
+// japan.addEventListener("mouseleave", () =>{
+// 	fullAnimHoriz(foodHover)
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimHoriz(gameHover)
+// 	fullAnimVert(mangaHover, "-")
+// 	fullAnimVert(musicHover, "-")
+// 	fullAnimVert(snowHover, "+")
+// })

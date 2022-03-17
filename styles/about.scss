@@ -384,3 +384,15 @@ $secColor: #F5EFF3;
 img:hover{
 	cursor: pointer;
 }
+
+.about_games{
+	display: none;
+	margin-top: 5.5vh;
+	.text_games{
+		width: 27.1vw;
+	}
+	.title_about_games{
+		display: flex;
+		flex-direction: row;
+	}
+}

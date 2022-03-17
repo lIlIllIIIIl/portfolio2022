@@ -589,4 +589,23 @@
 img:hover {
   cursor: pointer;
 }
+
+.about_games {
+  display: none;
+  margin-top: 5.5vh;
+}
+
+.about_games .text_games {
+  width: 27.1vw;
+}
+
+.about_games .title_about_games {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
 /*# sourceMappingURL=about.css.map */
