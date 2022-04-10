@@ -158,7 +158,7 @@ $secColor: #F5EFF3;
 			flex-direction: column;
 			justify-content: space-evenly;
 			transition-duration: 0.3s;
-			z-index: 100;
+			z-index: 350;
 			.food_row{
 				width: 100%;
 				height: 1px;
@@ -167,6 +167,7 @@ $secColor: #F5EFF3;
 			}
 		}
 		.image_food{
+			z-index: 300;
 			// width: -webkit-fill-available;
 			width: min-content;
 			max-height: 48vh;

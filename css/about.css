@@ -249,7 +249,7 @@
           justify-content: space-evenly;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
-  z-index: 100;
+  z-index: 350;
 }
 
 .div_food .food_image_hover .food_hover .food_row {
@@ -260,6 +260,7 @@
 }
 
 .div_food .food_image_hover .image_food {
+  z-index: 300;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
