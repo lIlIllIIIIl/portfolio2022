@@ -1,0 +1,51 @@
+.container{
+	padding-left: 0; 
+
+	header{
+		margin-left: 5.2vW;
+	}
+}
+
+.aboutContainer{
+	height: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	// display: none;
+	h1{
+		margin-right: 44px;
+	}
+	.aboutImage{
+		width: 88px;
+		height: 120px;
+		margin-right: 16px;
+	}
+}
+
+.aboutContainer-open{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	display: none;
+	justify-content: flex-end;
+	.aboutFullTitle-open{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 5vh;
+		svg{
+			margin-left: 10px;
+		}
+	}
+	.aboutInfos-open{
+		display: flex;
+		flex-direction: row;
+		.aboutImage-open{
+			max-width: 42vh;
+		}
+	}
+	.aboutText-open{
+		max-width: 25vw;
+		margin-left: 4vw;
+	}
+}
