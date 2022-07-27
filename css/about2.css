@@ -1,17 +1,21 @@
-.aboutContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: column;
+  padding-left: 0;
+}
+.container header {
+  margin-left: 5.2vh;
 }
 
+.aboutContainer {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
 .aboutContainer h1 {
   margin-right: 44px;
 }
-
 .aboutContainer .aboutImage {
   width: 88px;
   height: 120px;
@@ -19,40 +23,29 @@
 }
 
 .aboutContainer-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100%;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   display: none;
+  justify-content: flex-end;
 }
-
 .aboutContainer-open .aboutFullTitle-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 5vh;
 }
-
 .aboutContainer-open .aboutFullTitle-open svg {
   margin-left: 10px;
 }
-
 .aboutContainer-open .aboutInfos-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-/*# sourceMappingURL=about2.css.map */
+.aboutContainer-open .aboutInfos-open .aboutImage-open {
+  max-width: 42vh;
+}
+.aboutContainer-open .aboutText-open {
+  max-width: 25vw;
+  margin-left: 4vw;
+}/*# sourceMappingURL=about2.css.map */

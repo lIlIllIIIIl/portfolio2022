@@ -1,12 +1,7 @@
 .overall {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   width: 100vw;
 }
 
@@ -17,10 +12,8 @@
 
 .wrapper {
   /* position: absolute; */
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[24];
-      grid-template-columns: repeat(24, 1fr);
+  grid-template-columns: repeat(24, 1fr);
   /* grid-template-rows: repeat(24, 10px); */
   width: 100%;
   height: 100vh;
@@ -38,8 +31,7 @@
 
 * {
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   scroll-behavior: smooth;
   color: #F5EFF3;
 }
@@ -107,32 +99,19 @@ a {
 }
 
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 12.22vh;
   border-bottom: 1px #9E949C solid;
 }
-
 header .headerLogo {
   margin-bottom: 2.2vh;
 }
 
 .mainPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .container {
@@ -144,39 +123,25 @@ header .headerLogo {
 .menu {
   z-index: 10;
   border-left: 1px #9E949C solid;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-
 .menu :hover {
   cursor: pointer;
 }
-
 .menu h5 {
   display: inline-block;
 }
-
 .menu .menu_top {
   width: 100%;
 }
-
 .menu .menu_top .menu_blank {
   width: 100%;
   height: 4.44vh;
   border-bottom: 1px #F5EFF3 solid;
 }
-
 .menu .menu_top .menu_title {
   margin-top: 2.4vh;
 }
@@ -184,11 +149,9 @@ header .headerLogo {
 .menu_close {
   width: 16.1vw;
 }
-
 .menu_close .menu_items {
   display: none;
 }
-
 .menu_close .menu_title {
   text-align: center;
 }
@@ -196,13 +159,11 @@ header .headerLogo {
 .menu_open {
   width: 26.6vw;
 }
-
 .menu_open .menu_items {
   display: block;
   text-align: right;
   margin-right: 5.2vw;
 }
-
 .menu_open .menu_title {
   margin-left: 15.5vw;
 }
@@ -210,30 +171,17 @@ header .headerLogo {
 .menu_footer {
   margin-bottom: 4.5vh;
 }
-
 .menu_footer .menu_design {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 2.5vh;
 }
-
 .menu_footer .menu_design .ines {
   text-decoration: underline;
 }
-
 .menu_footer .menu_find {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .accueil_title {
@@ -276,25 +224,17 @@ header .headerLogo {
 
 .work_global {
   z-index: -10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   height: 100%;
   border-left: #F5EFF3 0.1px solid;
 }
-
 .work_global .work_project {
   border-right: #F5EFF3 0.1px solid;
   width: 28.5vw;
 }
-
 .work_global .work_project .project_name {
   margin-left: 3vw;
   margin-right: 7vw;
   margin-top: 5.5vh;
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
