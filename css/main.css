@@ -121,6 +121,7 @@ header .headerLogo {
 }
 
 .menu {
+  transition-duration: 1s;
   z-index: 10;
   border-left: 1px #9E949C solid;
   display: flex;

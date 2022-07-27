@@ -127,6 +127,7 @@ header{
 }
 
 .menu{
+	transition-duration: 1s;
 	:hover{
 		cursor: pointer;
 	}
