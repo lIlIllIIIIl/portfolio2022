@@ -138,7 +138,7 @@ header{
     z-index: 100;
     background: no-repeat url("../images/noir.jpg");
 	.menu_items a{
-		display: block;
+		display: inline;
 		position: relative;
 		color: $mainColor;
 		margin-bottom: 1vh;
@@ -201,9 +201,16 @@ header{
 	.menu_items{
 		display: block;
 		text-align: right;
-		margin-right: 5.2vw;
 		margin-top: 9.3vh;
 		margin-bottom: 2.5vh;
+		.menu_item{
+			h3{
+				display: inline;
+				// display: flex;
+				// justify-content: flex-end;
+				margin-right: 5.2vw;
+			}
+		}
 	}
 	.menu_title{
 		text-align: right;
@@ -224,6 +231,35 @@ header{
 	}
 }
 
+.menu{
+	.menu_items{
+		/* Fade in */
+		a::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 0.1em;
+			background-color: $mainColor;
+			opacity: 0;
+			transition: opacity 300ms, transform 300ms;
+		}
+		a:hover::after,
+		a::after {
+		opacity: 1;
+		// transform: translate3d(0, 2em, 0);
+		}
+		a::after {
+			opacity: 1;
+			transform: translate3d(200%, 0, 0);
+		}
+		a:hover::after,
+		a:focus::after{
+		transform: translate3d(0%, 0, 0);
+		}
+	}
+}
 .menu_footer{
 	margin-bottom: 4.5vh;
 	.menu_design{
@@ -240,35 +276,6 @@ header{
 	}
 }
 
-.menu{
-	.menu_items{
-		/* Fade in */
-		a::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 120%;
-			height: 0.1em;
-			background-color: $mainColor;
-			opacity: 0;
-			transition: opacity 300ms, transform 300ms;
-		}
-		a:hover::after,
-		a::after {
-		opacity: 1;
-		transform: translate3d(0, 2em, 0);
-		}
-		a::after {
-			opacity: 1;
-			transform: translate3d(200%, 0, 0);
-		}
-		a:hover::after,
-		a:focus::after{
-		transform: translate3d(65%, 0, 0);
-		}
-	}
-}
 
 
 // 
@@ -310,20 +317,25 @@ header{
 		width: 35.7vw;
 		margin-top: 4.4vh;
 	}
-	.contact_rows{
-		.row_init{
-			width: 38vw;
-			height: 1px;
-			margin-bottom: 6px;
-		}
-		.row{
-			width: 38vw;
-			height: 1px;
-			background: $mainColor;
-			margin-bottom: 7px;
-		}
-	}
+	// .contact_rows{
+	// 	.row_init{
+	// 		width: 38vw;
+	// 		height: 1px;
+	// 		margin-bottom: 6px;
+	// 	}
+	// 	.row{
+	// 		width: 38vw;
+	// 		height: 1px;
+	// 		background: $mainColor;
+	// 		margin-bottom: 7px;
+	// 	}
+	// }
 }
+
+.contact_rows{
+	height: 40vh;
+}
+
 .contact_mail{
 	padding-left: 16.4vw;
 }

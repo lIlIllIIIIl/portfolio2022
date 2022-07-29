@@ -139,7 +139,7 @@ header .headerLogo {
   align-items: center;
 }
 .menu .menu_items a {
-  display: block;
+  display: inline;
   position: relative;
   color: #9E949C;
   margin-bottom: 1vh;
@@ -194,9 +194,12 @@ header .headerLogo {
 .menu_open .menu_items {
   display: block;
   text-align: right;
-  margin-right: 5.2vw;
   margin-top: 9.3vh;
   margin-bottom: 2.5vh;
+}
+.menu_open .menu_items .menu_item h3 {
+  display: inline;
+  margin-right: 5.2vw;
 }
 .menu_open .menu_title {
   text-align: right;
@@ -215,6 +218,33 @@ header .headerLogo {
   margin-top: 0.8vh;
 }
 
+.menu .menu_items {
+  /* Fade in */
+}
+.menu .menu_items a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.1em;
+  background-color: #9E949C;
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+.menu .menu_items a:hover::after,
+.menu .menu_items a::after {
+  opacity: 1;
+}
+.menu .menu_items a::after {
+  opacity: 1;
+  transform: translate3d(200%, 0, 0);
+}
+.menu .menu_items a:hover::after,
+.menu .menu_items a:focus::after {
+  transform: translate3d(0%, 0, 0);
+}
+
 .menu_footer {
   margin-bottom: 4.5vh;
 }
@@ -229,34 +259,6 @@ header .headerLogo {
 .menu_footer .menu_find {
   display: flex;
   flex-direction: column;
-}
-
-.menu .menu_items {
-  /* Fade in */
-}
-.menu .menu_items a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 120%;
-  height: 0.1em;
-  background-color: #9E949C;
-  opacity: 0;
-  transition: opacity 300ms, transform 300ms;
-}
-.menu .menu_items a:hover::after,
-.menu .menu_items a::after {
-  opacity: 1;
-  transform: translate3d(0, 2em, 0);
-}
-.menu .menu_items a::after {
-  opacity: 1;
-  transform: translate3d(200%, 0, 0);
-}
-.menu .menu_items a:hover::after,
-.menu .menu_items a:focus::after {
-  transform: translate3d(65%, 0, 0);
 }
 
 .home_title {
@@ -297,16 +299,9 @@ header .headerLogo {
   width: 35.7vw;
   margin-top: 4.4vh;
 }
-.contact_intro .contact_rows .row_init {
-  width: 38vw;
-  height: 1px;
-  margin-bottom: 6px;
-}
-.contact_intro .contact_rows .row {
-  width: 38vw;
-  height: 1px;
-  background: #9E949C;
-  margin-bottom: 7px;
+
+.contact_rows {
+  height: 40vh;
 }
 
 .contact_mail {
