@@ -1,7 +1,8 @@
-const { gsap } = require("gsap/dist/gsap");
-const { ScrollTrigger } = require("gsap/dist/ScrollTrigger");
+import { gsap } from "gsap/dist/gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 
-gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 
 let panelsSection = document.querySelector(".work_global"),
