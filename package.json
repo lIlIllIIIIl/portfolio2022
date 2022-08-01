@@ -12,6 +12,7 @@
   "dependencies": {
     "@barba/core": "^2.9.7",
     "gsap": "^3.9.1",
+    "locomotive-scroll": "^4.1.4",
     "require": "^2.4.20"
   }
 }
