@@ -1,15 +1,15 @@
-import LocomotiveScroll from '../../node_modules/locomotive-scroll/dist/locomotive-scroll';
+import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
 
-const scroll = new LocomotiveScroll();
+const l = document.querySelector(".work_project-blank")
+console.log(l);
 
-
-
-
-
-
-
-
-
+const hScroll = new LocomotiveScroll({
+    el: document.querySelector(".work_global"),
+    smooth: true,
+    lerp: "0.05",
+    direction: "horizontal",
+    // gestureDirection: "both",
+})
 
 
 

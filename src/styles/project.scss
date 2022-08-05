@@ -1,0 +1,66 @@
+$bgColor: #000;
+$mainColor: #9E949C;
+$secColor: #F5EFF3;
+
+.mainPage{
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    header{
+        border: 0;
+    }
+}
+
+.project_global{
+    height: 86.51vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    border-top: solid 1px $mainColor;
+    .project_infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: 5vw;
+        a{
+            color: $mainColor;
+            margin-bottom: 4vh;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .project_inf{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 4vh;
+        }
+        .project_desc{
+            width: 40vw;
+        }
+    }
+    .project_im{
+        display: flex;
+        flex-direction: row;
+        .project_image{
+            height: 86.51vh;
+            width: fit-content;
+            border: solid 1px $mainColor;
+            border-top: 0;
+        }
+        .project_image-blank{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 5vw;
+            height: 100%;
+            span{
+                width: 1px;
+                height: 86.51vh;
+                background: $mainColor;
+            }
+        }
+    }
+    .project_black{
+        width: 16.1vw;
+    }
+}

@@ -24,12 +24,12 @@
 }
 
 .wrapper .column {
-  border: solid white 0.1px;
+  border: solid #9E949C 0.1px;
   grid-gap: 0;
 }
 
 .wrapper .r {
-  border: solid white 0.1px;
+  border: solid #9E949C 0.1px;
   grid-gap: 0;
 }
 
@@ -78,8 +78,16 @@ h5 {
   color: #F5EFF3;
 }
 
+span, div {
+  font-family: "Helvetica Neue";
+  font-weight: 300;
+  font-style: normal;
+  color: #F5EFF3;
+}
+
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 .highcap {
@@ -118,6 +126,80 @@ header .headerLogo {
   flex-direction: row;
 }
 
+.load_container {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 120;
+}
+.load_container .loader-text_container {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  height: auto;
+  overflow: hidden;
+}
+.load_container .loader-text_container .loader-name_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+  height: 5vh;
+}
+.load_container .loader-text_container .loader-percent_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+  height: 10vh;
+}
+.load_container .loader-text_container .loader-percent_container .loader-percent {
+  font-family: "Editorial New";
+  font-size: 70px;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 60px;
+  letter-spacing: -3px;
+  color: #9E949C;
+}
+.load_container .loader-text_container .loader-percent, .load_container .loader-text_container .loader-name {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 100%;
+  opacity: 0;
+  text-align: center;
+}
+.load_container .loader-images_container {
+  position: relative;
+  height: 50vh;
+  width: 20vw;
+  bottom: -20px;
+  z-index: 110;
+  overflow: hidden;
+}
+.load_container .loader-images_container .loader-image-f-1 {
+  position: absolute;
+  left: 0;
+  width: 20vw;
+  height: auto;
+  top: 50%;
+  opacity: 0;
+}
+.load_container .loader-images_container img[class*=loader-image-a] {
+  position: absolute;
+  left: 0;
+  width: 20vw;
+  height: auto;
+  top: 0%;
+  opacity: 0;
+}
+
 .container {
   height: 100vh;
   width: 83.9vw;
@@ -126,12 +208,10 @@ header .headerLogo {
 
 .menu {
   transition-duration: 0.8s;
-  position: fixed;
   right: 0;
   height: 100vh;
-  z-index: 100;
-  background: no-repeat url("../images/noir.jpg");
   z-index: 10;
+  background: no-repeat url("../images/noir.jpg");
   border-left: 1px #9E949C solid;
   display: flex;
   flex-direction: column;
@@ -156,7 +236,7 @@ header .headerLogo {
 .menu .menu_top .menu_blank {
   width: 100%;
   height: 4.44vh;
-  border-bottom: 1px #F5EFF3 solid;
+  border-bottom: 1px #9E949C solid;
 }
 .menu .menu_top .menu_title {
   margin-top: 2.4vh;
@@ -167,8 +247,8 @@ header .headerLogo {
   height: 12px;
   margin-left: 16px;
   transition-duration: 0.8s;
-  border-top: solid 1px white;
-  border-bottom: solid 1px white;
+  border-top: solid 1px #9E949C;
+  border-bottom: solid 1px #9E949C;
 }
 
 .menu_close {
@@ -189,7 +269,7 @@ header .headerLogo {
 }
 
 .menu_open {
-  width: 26.6vw;
+  width: 20vw;
 }
 .menu_open .menu_items {
   display: block;
@@ -305,5 +385,27 @@ header .headerLogo {
 }
 
 .contact_mail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding-left: 16.4vw;
+  background: black;
+  cursor: pointer;
+}
+.contact_mail .contact_fill {
+  display: block;
+  width: 20px;
+  height: 40px;
+  background: #F5EFF3;
+  margin: 0 5px;
+}
+
+.click {
+  transition-duration: 0.2s;
+  cursor: pointer;
+  position: absolute;
+}
+
+.not {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

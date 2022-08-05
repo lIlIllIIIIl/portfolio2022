@@ -11,8 +11,9 @@
   },
   "dependencies": {
     "@barba/core": "^2.9.7",
-    "gsap": "^3.9.1",
+    "gsap": "^3.10.4",
     "locomotive-scroll": "^4.1.4",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "watch": "^1.0.2"
   }
 }

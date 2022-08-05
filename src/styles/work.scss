@@ -4,42 +4,63 @@ $secColor: #F5EFF3;
 
 body {
 	scrollbar-width: none;
-	height: 172vh;
+	// height: 172vh;
+	a{
+		cursor: pointer;
+	}
 }
 
 header{
 	border-bottom: none
 }
-.menu{
-	position: fixed;
-	right: 0;
-	height: 100vh;
-	z-index: 100;
-	background: no-repeat url("../images/noir.jpg");
-}
+// .menu{
+// 	position: fixed;
+// 	right: 0;
+// 	height: 100vh;
+// 	z-index: 100;
+// 	background: no-repeat url("../images/noir.jpg");
+// }
 
 .work_global{
-	#works{
-		display: flex;
-		// height: 86.52vh;
-	}
 	z-index: -10;
 	display: flex;
+	height: 86.52vh;
+	width: fit-content;
+	#works{
+		display: flex;
+		width: fit-content;
+		height: 86.52vh;
+	}
 	.work_project1{
 		border-left: $secColor 0.1px solid;
 	}
 	.work_project{
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: flex-end;
 		border-right: $secColor 0.1px solid;
 		border-top: $secColor 0.1px solid;
-		// width: 28.5vw;
-		img{
-			height: 64vh;
-			width: fit-content	;
-		}
+		height: 86.52vh;
+		// max-width: 28vw;
 		.project_name{
-			margin-left: 3vw;
-			margin-right: 7vw;
-			margin-top: 5.5vh;
+			display: block;
+			height: 20vh;
+			margin: 4vh 2vw 5vh 2.5vw;
+			font-size: 8vh;
 		}
+			img{
+				height: 75%;
+			}
 	}
+}
+.work_project-blank{
+	display: flex;
+	// width: 50vw;
+	// width: 17.1vw;
+	z-index: 1500;
+	background: red;
+}
+
+.blackk{
+	// width: 17.1vw;
 }

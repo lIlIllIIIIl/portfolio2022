@@ -28,12 +28,12 @@ $secColor: #F5EFF3;
 }
 
 .wrapper .column{
-	border: solid white 0.1px;
+	border: solid $mainColor 0.1px;
 	grid-gap: 0;
 }
 
 .wrapper .r{
-	border: solid white 0.1px;
+	border: solid $mainColor 0.1px;
 	grid-gap: 0;
 }
 // 
@@ -83,8 +83,16 @@ h5{
 	color: $secColor;
 }
 
+span, div{
+	font-family: "Helvetica Neue";
+	font-weight: 300;
+	font-style: normal;
+	color: $secColor;
+}
+
 a{
 	text-decoration: none;
+	cursor: pointer;
 }
 
 .highcap{
@@ -124,6 +132,82 @@ header{
 	flex-direction: row;
 }
 
+
+.load_container{
+	background: $bgColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	z-index: 120;
+	.loader-text_container{
+		display: flex;
+		flex-direction: column;
+		width: 20vw;
+		height: auto;
+		overflow: hidden;
+		.loader-name_container{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			width: 20vw;
+			height: 5vh;
+		}
+		.loader-percent_container{
+			position: relative;
+			display: flex;
+			justify-content: center;
+			width: 20vw;
+			height: 10vh;
+			.loader-percent{
+				font-family: "Editorial New";
+				font-size: 70px;
+				font-weight: 100;
+				font-style: normal;
+				line-height: 60px;
+				letter-spacing: -3px;
+				color: $mainColor;
+			}
+		}
+		.loader-percent, .loader-name{
+			position: absolute;
+			width: auto;
+			height: auto;
+			top: 100%;
+			opacity: 0;
+			text-align: center;
+		}
+	}
+	.loader-images_container{
+		position: relative;
+		height: 50vh;
+		width: 20vw;
+		bottom: -20px;
+		z-index: 110;
+		overflow: hidden;
+		.loader-image-f-1{
+			position: absolute;
+			left: 0;
+			width: 20vw;
+			height: auto;
+			top: 50%;
+			opacity: 0;
+		}
+		img[class*="loader-image-a"]{
+			position: absolute;
+			left: 0;
+			width: 20vw;
+			height: auto;
+			top: 0%;
+			opacity: 0;
+		}
+	}
+}
+
+
 .container{
 	height: 100vh;
 	width: 83.9vw;
@@ -132,10 +216,10 @@ header{
 
 .menu{
 	transition-duration: 0.8s;
-	position: fixed;
+	// position: fixed;
     right: 0;
     height: 100vh;
-    z-index: 100;
+    z-index: 10;
     background: no-repeat url("../images/noir.jpg");
 	.menu_items a{
 		display: inline;
@@ -146,7 +230,6 @@ header{
 	:hover{
 		cursor: pointer;
 	}
-	z-index: 10;
 	border-left: 1px $mainColor solid;
 	display: flex;
 	flex-direction: column;
@@ -160,7 +243,7 @@ header{
 		.menu_blank{
 			width: 100%;
 			height: 4.44vh;
-			border-bottom: 1px $secColor solid;
+			border-bottom: 1px $mainColor solid;
 		}
 		.menu_title{
 			margin-top: 2.4vh;
@@ -173,8 +256,8 @@ header{
 			height: 12px;
 			margin-left: 16px;
 			transition-duration: 0.8s;
-			border-top: solid 1px white;
-			border-bottom: solid 1px white;
+			border-top: solid 1px $mainColor;
+			border-bottom: solid 1px $mainColor;
 		}
 	}
 }
@@ -197,7 +280,7 @@ header{
 }
 
 .menu_open{
-	width: 26.6vw;
+	width: 20vw;
 	.menu_items{
 		display: block;
 		text-align: right;
@@ -337,9 +420,26 @@ header{
 }
 
 .contact_mail{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	padding-left: 16.4vw;
+	background: black;
+	cursor: pointer;
+	.contact_fill{
+		display: block;
+		width: 20px;
+		height: 40px;
+		background: $secColor;
+		margin: 0 5px;
+	}
 }
 
-
-// WORK
-
+.click{
+	transition-duration: 0.2s;
+	cursor: pointer;
+	position: absolute;
+}
+.not{
+	display: none;
+}

@@ -1,42 +1,52 @@
 body {
   scrollbar-width: none;
-  height: 172vh;
+}
+body a {
+  cursor: pointer;
 }
 
 header {
   border-bottom: none;
 }
 
-.menu {
-  position: fixed;
-  right: 0;
-  height: 100vh;
-  z-index: 100;
-  background: no-repeat url("../images/noir.jpg");
-}
-
 .work_global {
   z-index: -10;
   display: flex;
+  height: 86.52vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .work_global #works {
   display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 86.52vh;
 }
 .work_global .work_project1 {
   border-left: #F5EFF3 0.1px solid;
 }
 .work_global .work_project {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   border-right: #F5EFF3 0.1px solid;
   border-top: #F5EFF3 0.1px solid;
-}
-.work_global .work_project img {
-  height: 64vh;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  height: 86.52vh;
 }
 .work_global .work_project .project_name {
-  margin-left: 3vw;
-  margin-right: 7vw;
-  margin-top: 5.5vh;
+  display: block;
+  height: 20vh;
+  margin: 4vh 2vw 5vh 2.5vw;
+  font-size: 8vh;
+}
+.work_global .work_project img {
+  height: 75%;
+}
+
+.work_project-blank {
+  display: flex;
+  z-index: 1500;
+  background: red;
 }/*# sourceMappingURL=work.css.map */
