@@ -2,6 +2,11 @@ import { gsap } from "gsap";
 // import { gsap } from "../../node_modules/gsap/index.js";
 // import { gsap } from "https://cdn.skypack.dev/gsap";
 
+console.log(document.readyState);
+document.onreadystatechange = function() {
+    console.log(document.readyState);
+}
+
 const percent = document.querySelector(".loader-percent")
 let count = document.querySelectorAll(".theCount");
 
