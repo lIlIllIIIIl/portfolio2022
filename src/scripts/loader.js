@@ -1,5 +1,5 @@
-// import { gsap } from "gsap";
-import { gsap } from "../../node_modules/gsap/index.js";
+import { gsap } from "gsap";
+// import { gsap } from "../../node_modules/gsap/index.js";
 // import { gsap } from "https://cdn.skypack.dev/gsap";
 
 const percent = document.querySelector(".loader-percent")

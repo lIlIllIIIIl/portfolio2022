@@ -1,6 +1,7 @@
 .container{
-	padding-left: 0; 
-
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
 	header{
 		margin-left: 5.2vW;
 	}
@@ -11,7 +12,6 @@
 	align-items: center;
 	display: flex;
 	flex-direction: row;
-	// display: none;
 	h1{
 		margin-right: 44px;
 	}
@@ -28,6 +28,7 @@
 	flex-direction: column;
 	display: none;
 	justify-content: flex-end;
+	margin: 0 0 100px 74px;
 	.aboutFullTitle-open{
 		display: flex;
 		flex-direction: row;
@@ -41,7 +42,27 @@
 		display: flex;
 		flex-direction: row;
 		.aboutImage-open{
+			height: 380px;
 			max-width: 42vh;
+		}
+		.aboutOthers{
+			display: flex;
+			flex-direction: row;
+			align-items: flex-end;
+			margin-right: 10px;
+			.aboutOther{
+				height: 90px;
+				width: auto;
+				margin: 0 5px;
+			}
+			.notChosen{
+				filter: grayscale(1);
+				opacity: 0.5;
+			}
+			.chosenOne{
+				filter: grayscale(0) !important;
+				opacity: 1 !important;
+			}
 		}
 	}
 	.aboutText-open{

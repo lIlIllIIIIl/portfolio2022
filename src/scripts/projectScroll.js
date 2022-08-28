@@ -1,4 +1,7 @@
-import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
+// import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
+
+import LocomotiveScroll from 'locomotive-scroll';
+
 
 
 const hScroll = new LocomotiveScroll({

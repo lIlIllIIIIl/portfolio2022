@@ -135,7 +135,8 @@ header{
 
 .load_container{
 	background: $bgColor;
-	display: flex;
+	display: none !important;
+	// display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
