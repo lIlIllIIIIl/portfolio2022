@@ -1,8 +1,8 @@
-// import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
+import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
 
 // const LocomotiveScroll = require('locomotive-scroll');
 
-import LocomotiveScroll from 'locomotive-scroll';
+// import LocomotiveScroll from 'locomotive-scroll';
 
 
 const l = document.querySelector(".work_project-blank")

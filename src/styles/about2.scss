@@ -34,8 +34,12 @@
 		flex-direction: row;
 		align-items: center;
 		margin-bottom: 5vh;
-		svg{
-			margin-left: 10px;
+		.aboutTitle-cross{
+			margin-left: 20px;
+			background: black;
+		}
+		.aboutTitle-cross:hover{
+			cursor: pointer;
 		}
 	}
 	.aboutInfos-open{
