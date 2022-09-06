@@ -3,62 +3,105 @@
   position: relative;
   height: 87.78vh;
 }
+
 .aboutPage .about_row-1 {
   position: absolute;
   width: 78.75vw;
   top: 0;
   right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: end;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .aboutPage .about_row-2 {
   position: absolute;
   width: 78.75vw;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: flex-end;
-  flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .about_game-title {
   width: 30.59%;
   max-width: 347px;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .div_game {
   max-width: 347px;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
+
 .div_game .game_hover {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
+
 .div_game .game_hover .game_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
   display: inline;
 }
+
 .div_game .image_game {
   border-bottom: 1px solid #9E949C;
   border-left: 1px solid #9E949C;
@@ -70,8 +113,13 @@
 }
 
 .about_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin-top: 5.5vh;
 }
 
@@ -79,28 +127,46 @@
   width: 41.96%;
   max-width: 476px;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-left: 1px solid #9E949C;
   border-right: 1px solid #9E949C;
   cursor: pointer;
 }
+
 .div_manga .manga_image_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow: hidden;
 }
+
 .div_manga .manga_image_hover .manga_hover {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
+
 .div_manga .manga_image_hover .manga_hover .manga_column {
   width: 1px;
   height: 100%;
@@ -108,21 +174,31 @@
   z-index: 10;
   display: inline;
 }
+
 .div_manga .manga_image_hover .image_manga {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
   max-height: 30.2vh;
 }
+
 .div_manga .manga_bot_columns {
   z-index: -20;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 45vh;
   border-top: 1px solid #9E949C;
   border-bottom: 1px solid #9E949C;
 }
+
 .div_manga .manga_bot_columns .manga_bot_column {
   width: 1px;
   height: 100%;
@@ -133,35 +209,56 @@
   width: 27.4%;
   max-width: 311px;
   height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   border-bottom: 1px solid #9E949C;
   cursor: pointer;
 }
+
 .div_food .food_image_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   position: relative;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .div_food .food_image_hover .food_hover {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   z-index: 350;
 }
+
 .div_food .food_image_hover .food_hover .food_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
   display: inline;
 }
+
 .div_food .food_image_hover .image_food {
   z-index: 300;
   width: -webkit-min-content;
@@ -173,11 +270,19 @@
 .music_left_columns {
   height: 54.1vh;
   width: 5.8vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border: 1px solid #9E949C;
 }
+
 .music_left_columns .music_left_column {
   width: 1px;
   height: 100%;
@@ -190,55 +295,93 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
+
 .div_music .music_hover {
   position: absolute;
   bottom: -100%;
   right: 0%;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   z-index: 100;
 }
+
 .div_music .music_hover .music_column {
   width: 1px;
   height: 100%;
   background: #9E949C;
   display: inline;
 }
+
 .div_music .image_music {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-height: 45.2vh;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
+
 .div_music .music_image_rows {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .div_music .music_image_rows .music_top_rows {
   height: 9vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   background: #000;
   border-top: 1px solid #9E949C;
   border-right: 1px solid #9E949C;
   border-bottom: 1px solid #9E949C;
   z-index: 150;
 }
+
 .div_music .music_image_rows .music_top_rows .music_top_row {
   width: 100%;
   height: 1px;
@@ -251,30 +394,46 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   cursor: pointer;
   overflow: hidden;
   position: relative;
 }
+
 .div_snow .snow_hover {
   position: absolute;
   top: -100%;
   right: 0%;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   z-index: 100;
 }
+
 .div_snow .snow_hover .snow_column {
   width: 1px;
   height: 100%;
   background: #9E949C;
   display: inline;
 }
+
 .div_snow .image_snow {
   border-top: 1px solid #9E949C;
   max-height: 47.78vh;
@@ -282,23 +441,33 @@
   width: -moz-min-content;
   width: min-content;
 }
+
 .div_snow .snow_bot_columns {
   height: 2vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border-right: 1px solid #9E949C;
   border-left: 1px solid #9E949C;
   border-top: 1px solid #9E949C;
   background: #000;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   z-index: 150;
 }
+
 .div_snow .snow_bot_columns .snow_bot_column {
   width: 1px;
   height: 100%;
   background: #9E949C;
 }
+
 .div_snow .snow_bot_rows {
   border-left: 1px solid #9E949C;
   background: #000;
@@ -311,48 +480,80 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   cursor: pointer;
 }
+
 .div_japan .japan_image_hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   overflow: hidden;
   position: relative;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
+
 .div_japan .japan_hover {
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  transition-duration: 0.3s;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   z-index: 100;
 }
+
 .div_japan .japan_hover .japan_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
   display: inline;
 }
+
 .div_japan .image_japan {
   max-height: 28.89vh;
   max-width: 100%;
   border-top: 1px solid #9E949C;
   border-left: 1px solid #9E949C;
 }
+
 .div_japan .japan_top_rows {
   height: 6.3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   z-index: 150;
 }
+
 .div_japan .japan_top_rows .japan_top_row {
   width: 21.7vw;
   height: 1px;
@@ -361,20 +562,28 @@
 
 .snow_bot_rows, .japan_bot_rows {
   height: 4.66vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-top: 1px solid #9E949C;
   background: #000;
   z-index: 150;
 }
+
 .snow_bot_rows .JS_bot_row, .japan_bot_rows .JS_bot_row {
   width: 100%;
   height: 1px;
   background: #9E949C;
 }
 
-.div[class$=_hover] {
+.div[class$="_hover"] {
   z-index: 4;
 }
 
@@ -386,10 +595,18 @@ img:hover {
   display: none;
   margin-top: 5.5vh;
 }
+
 .about_games .text_games {
   width: 27.1vw;
 }
+
 .about_games .title_about_games {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-}/*# sourceMappingURL=about.css.map */
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=about.css.map */

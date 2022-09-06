@@ -64,3 +64,12 @@ $secColor: #F5EFF3;
         width: 16.1vw;
     }
 }
+
+.project_next{
+    width: 45vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+}

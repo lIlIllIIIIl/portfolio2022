@@ -8,7 +8,7 @@ import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
 const l = document.querySelector(".work_project-blank")
 console.log(l);
 
-const hScroll = new LocomotiveScroll({
+const workScroll = new LocomotiveScroll({
     el: document.querySelector(".work_global"),
     smooth: true,
     lerp: "0.05",
