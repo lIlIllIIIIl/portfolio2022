@@ -1,7 +1,6 @@
 body {
   scrollbar-width: none;
 }
-
 body a {
   cursor: pointer;
 }
@@ -12,61 +11,42 @@ header {
 
 .work_global {
   z-index: -10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 86.52vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .work_global #works {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 86.52vh;
 }
-
 .work_global .work_project1 {
   border-left: #F5EFF3 0.1px solid;
 }
-
 .work_global .work_project {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   border-right: #F5EFF3 0.1px solid;
   border-top: #F5EFF3 0.1px solid;
   height: 86.52vh;
 }
-
 .work_global .work_project .project_name {
   display: block;
   height: 20vh;
   margin: 4vh 2vw 5vh 2.5vw;
   font-size: 8vh;
 }
-
 .work_global .work_project img {
   height: 75%;
 }
 
 .work_project-blank {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 1500;
   background: red;
-}
-/*# sourceMappingURL=work.css.map */
+}/*# sourceMappingURL=work.css.map */

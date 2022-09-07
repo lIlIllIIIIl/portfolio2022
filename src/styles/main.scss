@@ -55,13 +55,13 @@ body{
 }
 
 h1{
-	font-family: "Editorial New";
-	font-size: 70px;
-	font-weight: 100;
-	font-style: normal;
-	line-height: 60px;
-	letter-spacing: -3px;
-	color: $mainColor;
+		font-family: "Editorial New";
+		font-size: 70px;
+		font-weight: 100;
+		font-style: normal;
+		line-height: 60px;
+		letter-spacing: -3px;
+		color: $mainColor;
 }
 
 h3{
@@ -217,7 +217,7 @@ header{
 
 .menu{
 	transition-duration: 0.8s;
-	// position: fixed;
+	position: fixed;
     right: 0;
     height: 100vh;
     z-index: 10;
@@ -281,7 +281,7 @@ header{
 }
 
 .menu_open{
-	width: 20vw;
+	width: 26vw;
 	.menu_items{
 		display: block;
 		text-align: right;
@@ -289,10 +289,10 @@ header{
 		margin-bottom: 2.5vh;
 		.menu_item{
 			h3{
-				display: inline;
+				display: block;
 				// display: flex;
 				// justify-content: flex-end;
-				margin-right: 5.2vw;
+				margin-right: 6.2vw;
 			}
 		}
 	}
@@ -365,7 +365,7 @@ header{
 // 
 
 .home_title{
-	display: inline-block;
+	display: inline;
 }
 
 .home_arrow{
@@ -443,4 +443,13 @@ header{
 }
 .not{
 	display: none;
+}
+
+
+// RESPONSIVE
+
+@media screen and (max-width: 900px) {
+	.presentation_text{
+		width: 60vw;
+	}
 }

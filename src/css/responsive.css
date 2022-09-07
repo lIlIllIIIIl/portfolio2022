@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+  h1 {
+    font-family: "Editorial New";
+    font-style: normal;
+    color: #9E949C;
+    font-size: 52px;
+    letter-spacing: -2px;
+    font-weight: 100;
+  }
+  h5 {
+    font-size: 16px;
+    font-weight: 100;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    color: #F5EFF3;
+  }
+  .menu_close .menu_title .menu_title-text {
+    display: none !important;
+  }
+  .menu_close .menu_footer {
+    display: none;
+  }
+  .menu_open {
+    width: 75vw !important;
+  }
+}/*# sourceMappingURL=responsive.css.map */

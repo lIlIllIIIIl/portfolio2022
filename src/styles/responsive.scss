@@ -1,0 +1,42 @@
+$bgColor: #000;
+$mainColor: #9E949C;
+$secColor: #F5EFF3;
+
+// GLOBAL RESPONSIVE
+
+@media screen and (max-width: 600px) {
+	h1{
+        font-family: "Editorial New";
+		font-style: normal;
+		color: $mainColor;
+        font-size: 52px;
+        letter-spacing: -2px;
+        font-weight: 100;
+    }
+
+    h5{
+        font-size: 16px;
+        font-weight: 100;
+        font-family: "Helvetica Neue";
+		font-style: normal;
+		// line-height: 20px;
+		color: $secColor;
+    }
+
+    .menu_close{
+        // width: 55px;
+        .menu_title{
+            .menu_title-text{
+                display: none !important;
+            }
+        }
+        .menu_footer{
+            display: none;
+        }
+    }
+
+    .menu_open{
+        width: 75vw !important;
+    }
+
+}

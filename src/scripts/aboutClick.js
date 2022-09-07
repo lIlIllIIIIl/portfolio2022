@@ -20,15 +20,35 @@ cross.addEventListener("click", function(e){
 	})
 })
 
+aboutOthers.forEach(elem =>{
+
+	elem.addEventListener("click", function(e){
+		aboutOthers.forEach(remover =>{
+			remover.classList.remove("chosenOne")
+		})
+
+		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
+		imageAff[1].classList.toggle("chosenOne")
+		about.style.display="none"
+		aboutOpen.style.display="flex"
+		titleOpen.innerHTML = elem.alt
+		let src = elem.src.replace("small", "large")
+		imageOpen.src = src
+		textOpen.innerHTML = elem.ariaValueMax
+	})
+})
+
+
+
 images.forEach(elem =>{
 	elem.addEventListener("click", function(e){
 		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
 		imageAff[1].classList.toggle("chosenOne")
 		about.style.display="none"
-			aboutOpen.style.display="flex"
-			titleOpen.innerHTML = elem.alt
-			let src = elem.src.replace("small", "large")
-			imageOpen.src = src
-			textOpen.innerHTML = elem.ariaValueMax
+		aboutOpen.style.display="flex"
+		titleOpen.innerHTML = elem.alt
+		let src = elem.src.replace("small", "large")
+		imageOpen.src = src
+		textOpen.innerHTML = elem.ariaValueMax
 	})
 })
