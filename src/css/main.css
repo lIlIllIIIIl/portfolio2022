@@ -316,6 +316,7 @@ header .headerLogo {
 .menu .menu_items a:hover::after,
 .menu .menu_items a::after {
   opacity: 1;
+  color: red;
 }
 .menu .menu_items a::after {
   opacity: 1;
