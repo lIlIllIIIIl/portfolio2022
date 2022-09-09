@@ -42,17 +42,19 @@ header{
 		border-top: $secColor 0.1px solid;
 		height: 86.52vh;
 		// max-width: 28vw;
-		.project_name{
-			display: block;
+		.project_link{
 			height: 20vh;
 			margin: 4vh 2vw 5vh 2.5vw;
-			font-size: 8vh;
+			.project_name{
+				display: inline-block;
+			}
 		}
 			img{
 				height: 75%;
 			}
 	}
 }
+
 .work_project-blank{
 	display: flex;
 	// width: 50vw;
@@ -63,4 +65,19 @@ header{
 
 .blackk{
 	// width: 17.1vw;
+}
+
+
+
+// RESPONSIVE
+
+@media screen and (max-width: 450px) {
+	.work_project{
+		width: 83.9vw;
+		img{
+			object-fit: contain;
+			display: flex;
+			height: auto !important;
+		}
+	}
 }

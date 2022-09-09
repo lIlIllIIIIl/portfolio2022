@@ -430,15 +430,15 @@ header{
 }
 
 .contact_mail{
-	// display: flex;
+	display: flex;
 	// flex-direction: row;
 	// align-items: center;
 	display: block;
 	padding-left: 16.4vw;
 	background: black;
 	cursor: pointer;
-	h1{
-		display: inline;
+	.mail{
+		display: inline-block;
 	}
 	svg{
 		margin-left: 1vw;
