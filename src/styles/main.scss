@@ -226,7 +226,8 @@ header{
 		display: inline;
 		position: relative;
 		color: $mainColor;
-		margin-bottom: 1vh;
+		margin-bottom: 1.8vh;
+		height: fit-content;
 	}
 	:hover{
 		cursor: pointer;
@@ -283,16 +284,21 @@ header{
 .menu_open{
 	width: 26vw;
 	.menu_items{
-		display: block;
+		// display: block;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 		text-align: right;
 		margin-top: 9.3vh;
 		margin-bottom: 2.5vh;
 		.menu_item{
+			display: inline;
 			h3{
-				display: block;
+				display: inline-block;
 				// display: flex;
 				// justify-content: flex-end;
 				margin-right: 6.2vw;
+				line-height: 45px;
 			}
 		}
 	}
@@ -324,7 +330,7 @@ header{
 			bottom: 0;
 			left: 0;
 			width: 100%;
-			height: 0.1em;
+			height: 0.1vh;
 			background-color: $mainColor;
 			opacity: 0;
 			transition: opacity 300ms, transform 300ms;
@@ -424,17 +430,24 @@ header{
 }
 
 .contact_mail{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
+	// display: flex;
+	// flex-direction: row;
+	// align-items: center;
+	display: block;
 	padding-left: 16.4vw;
 	background: black;
 	cursor: pointer;
+	h1{
+		display: inline;
+	}
+	svg{
+		margin-left: 1vw;
+	}
 	.contact_fill{
 		display: block;
 		width: 20px;
 		height: 40px;
-		background: $secColor;
+		background: $mainColor;
 		margin: 0 5px;
 	}
 }
@@ -454,5 +467,21 @@ header{
 @media screen and (max-width: 900px) {
 	.presentation_text{
 		width: 60vw;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.contact_mail{
+		padding-left: 0;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.contact_mail{
+		padding-left: 0;
+		span{
+
+			display: block;
+		}
 	}
 }

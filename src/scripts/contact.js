@@ -42,3 +42,9 @@ mail.addEventListener("mouseover", e =>{
 mail.addEventListener("mouseout", e =>{
     click.classList.add("not")
 })
+
+
+document.querySelectorAll('.mail').forEach((e) => {
+    let at = new RegExp('at', 'g');
+    e.textContent = e.textContent.replace(at, '@');
+});

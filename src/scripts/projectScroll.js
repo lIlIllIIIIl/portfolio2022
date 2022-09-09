@@ -10,4 +10,5 @@ const projectScroll = new LocomotiveScroll({
     lerp: "0.05",
     direction: "horizontal",
     gestureDirection: "both",
+    // reloadOnContextChange
 })
