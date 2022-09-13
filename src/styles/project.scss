@@ -173,4 +173,19 @@ $secColor: #F5EFF3;
             }
         }
     }
+}
+
+
+
+// RESPONSIVE
+
+@media screen and (max-width: 600px) {
+    .project_next{
+        .project_next-link{
+            width: 80vw;
+        }
+        .project_next-lines{
+            height: 30vh;
+        }
     }
+}
