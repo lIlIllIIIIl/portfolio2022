@@ -417,9 +417,9 @@ header .headerLogo {
 }
 
 .click {
-  transition-duration: 0.2s;
   cursor: pointer;
   position: absolute;
+  transition: 0.5s ease-out;
 }
 
 .not {

@@ -22,7 +22,7 @@ function syncpointer(elem = click) {
 
 document.addEventListener('mousemove', e => {
 	pointerPos.x = e.clientX-5
-	pointerPos.y = e.clientY-30
+	pointerPos.y = e.clientY-60
 	syncpointer(click)
 })
 
