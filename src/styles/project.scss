@@ -3,7 +3,7 @@ $mainColor: #9E949C;
 $secColor: #F5EFF3;
 
 .mainPage{
-    overflow-y: hidden;
+    // overflow-y: hidden;
     display: flex;
     flex-direction: row;
     header{
@@ -17,14 +17,22 @@ $secColor: #F5EFF3;
     display: flex;
     flex-direction: row;
     border-top: solid 1px $mainColor;
+    .idk{
+        width: 40vw;
+    }
     .project_infos{
+        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-right: 5vw;
+        position: fixed;
+        // position: sticky;
         a{
             color: $mainColor;
             margin-bottom: 4vh;
+            display: inline;
+            width: fit-content;
         }
         a:hover{
             text-decoration: underline;
@@ -35,28 +43,34 @@ $secColor: #F5EFF3;
             margin-bottom: 4vh;
         }
         .project_desc{
-            width: 40vw;
+            width: 35vw;
         }
     }
-    .project_im{
+    .project_images{
         display: flex;
         flex-direction: row;
-        .project_image{
-            height: 86.51vh;
-            // width: fit-content;
-            border: solid 1px $mainColor;
-            border-top: 0;
-        }
-        .project_image-blank{
+        padding: 0 40vw;
+        .project_im{
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            width: 5vw;
-            height: 100%;
-            span{
-                width: 1px;
+            .project_image{
                 height: 86.51vh;
-                background: $mainColor;
+                // width: fit-content;
+                border: solid 1px $mainColor;
+                border-top: 0;
+            }
+            .project_image-blank{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                width: 5vw;
+                height: 100%;
+                background: $bgColor;
+                span{
+                    width: 1px;
+                    height: 86.51vh;
+                    background: $mainColor;
+                }
             }
         }
     }
@@ -67,7 +81,7 @@ $secColor: #F5EFF3;
 }
 
 .project_next{
-    width: 70vw;
+    // width: 70vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -109,3 +123,54 @@ $secColor: #F5EFF3;
         }
     }
 }
+
+
+@media screen and (max-width: 500px) {
+    .container{
+        padding: 0;
+        overflow-x: hidden;
+        header{
+            padding-left: 5.2vw;
+        }
+        .project_global{
+            flex-direction: column;
+            .project_infos{
+                position: initial;
+                padding-left: 5.2vw;
+                padding-top: 90px;
+                .project_inf, .proJECT8DESC{
+                    font-size: 13px;
+                }
+                .project_desc{
+                    width: 70vw;
+                }
+            }
+            .project_images{
+                flex-direction: column;
+                padding: 0;
+                #image-1{
+                    margin-top: 100px;
+                }
+                .project_im{
+                    flex-direction: column;
+                    .project_image{
+                        // width: 20px;
+                        width: 93.9vw;
+                        height: fit-content;
+                        border-left: 0;
+                        border-top: solid $mainColor 1px;
+                        // border-left: solid $mainColor 0px 0px 0px 0px;
+                    }
+                    .project_image-blank{
+                        flex-direction: column;
+                        height: 5vh;
+                        .project_image-blank-line{
+                            width: 100vh;
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    }

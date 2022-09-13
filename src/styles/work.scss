@@ -63,10 +63,9 @@ header{
 	background: red;
 }
 
-.blackk{
-	// width: 17.1vw;
+.last_project{
+	margin-right: 25vw;
 }
-
 
 
 // RESPONSIVE
@@ -78,6 +77,9 @@ header{
 			object-fit: contain;
 			display: flex;
 			height: auto !important;
+		}
+		.blackk{
+			width: 10vw;
 		}
 	}
 }

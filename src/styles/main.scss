@@ -282,7 +282,7 @@ header{
 }
 
 .menu_open{
-	width: 26vw;
+	width: 22vw;
 	.menu_items{
 		// display: block;
 		display: flex;
@@ -477,11 +477,22 @@ header{
 }
 
 @media screen and (max-width: 800px) {
+	.contact_intro{
+		.contact_text{
+			width: 70vw;
+		}
+	}
 	.contact_mail{
 		padding-left: 0;
 		span{
 
 			display: block;
 		}
+	}
+}
+
+@media screen and (max-width: 300px) {
+	div.contact_mail h1{
+		font-size: 46px;
 	}
 }

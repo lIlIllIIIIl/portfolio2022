@@ -5,10 +5,22 @@ import "../../node_modules/locomotive-scroll/dist/locomotive-scroll.js";
 
 
 const projectScroll = new LocomotiveScroll({
-    el: document.querySelector(".project_global"),
+    el: document.querySelector(".project_images"),
     smooth: true,
     lerp: "0.05",
     direction: "horizontal",
     gestureDirection: "both",
-    // reloadOnContextChange
+    reloadOnContextChange: "true",
+    smartphone: {
+		direction: "vertical",
+    }
 })
+
+// const projectScroll = new LocomotiveScroll({
+//     el: document.querySelector(".project_global"),
+//     smooth: true,
+//     lerp: "0.05",
+//     direction: "horizontal",
+//     gestureDirection: "both",
+//     // reloadOnContextChange
+// })
