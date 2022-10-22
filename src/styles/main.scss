@@ -5,6 +5,10 @@ $secColor: #F5EFF3;
 
 // ANIMATIONS
 
+h1{
+	overflow: hidden;
+}
+
 @keyframes idk {
 	from{
 		opacity: 0;
@@ -12,6 +16,23 @@ $secColor: #F5EFF3;
 	to{
 		opacity: 1;
 	}
+}
+
+.border_bottom{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 1px;
+	background: $mainColor;
+}
+
+.border_left{
+	position: absolute;
+	// bottom: 0;
+	left: 0;
+	width: 1px;
+	height: 100%;
+	background: $mainColor;
 }
 
 // CSS
@@ -91,7 +112,8 @@ h3{
 }
 
 h5{
-	font-family: "Helvetica Neue";
+	// font-family: "Helvetica Neue";
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-size: 18px;
 	font-weight: 300;
 	font-style: normal;
@@ -100,7 +122,8 @@ h5{
 }
 
 span, div{
-	font-family: "Helvetica Neue";
+	// font-family: "Helvetica Neue";
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-weight: 300;
 	font-style: normal;
 	color: $secColor;
@@ -132,15 +155,17 @@ a{
 }
 
 header{
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
 	height: 13.48vh;
-	border-bottom: 1px $mainColor solid;
+	// border-bottom: 1px $mainColor solid;
 	// padding-top: 4.2vw;
 	.headerLogo{
 		margin-bottom: 2.2vh;
 	}
+
 }
 
 .mainPage{
@@ -238,6 +263,11 @@ header{
     height: 100vh;
     z-index: 10;
     background: no-repeat url("../images/noir.jpg");
+	// border-left: 1px $mainColor solid;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
 	.menu_items a{
 		display: inline;
 		position: relative;
@@ -248,20 +278,17 @@ header{
 	:hover{
 		cursor: pointer;
 	}
-	border-left: 1px $mainColor solid;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
 	h5{
 		display: inline-block;
 	}
 	.menu_top{
 		width: 100%;
 		.menu_blank{
+			position: relative;
 			width: 100%;
 			height: 4.44vh;
-			border-bottom: 1px $mainColor solid;
+			overflow: hidden;
+			// border-bottom: 1px $mainColor solid;
 		}
 		.menu_title{
 			margin-top: 2.4vh;

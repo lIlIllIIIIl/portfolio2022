@@ -14,6 +14,7 @@
     "gsap": "^3.10.4",
     "locomotive-scroll": "^4.1.4",
     "require": "^2.4.20",
+    "splitting": "^1.0.6",
     "watch": "^1.0.2"
   }
 }
