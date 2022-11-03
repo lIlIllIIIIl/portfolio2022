@@ -32,6 +32,8 @@ mail.addEventListener("mouseover", e =>{
         navigator.clipboard.writeText(mailText.textContent)
             .then(() => {
             console.log("Mail copied to clipboard.")
+            click.textContent = "copied !";
+            setTimeout(modText(), 5000);
         })
             .catch(err => {
             console.log('Something went wrong.', err);
@@ -48,3 +50,8 @@ document.querySelectorAll('.mail').forEach((e) => {
     let at = new RegExp('at', 'g');
     e.textContent = e.textContent.replace(at, '@');
 });
+
+const modText = function(){
+    console.log("lol");
+    click.textContent = "click to copy !"
+}

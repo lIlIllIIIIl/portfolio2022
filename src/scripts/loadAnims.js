@@ -5,183 +5,166 @@ import Splitting from "splitting";
 
 Splitting();
 
-
 const homeLogo = document.querySelector(".headerLogoSvg")
 const homeLogoSplit = Splitting({ target: homeLogo, by: 'items' });
 homeLogo.parentElement.style.overflow = "hidden";
-console.log(homeLogoSplit[0]);
+// console.log(homeLogoSplit[0]);
 
-let timeline1 = gsap.timeline();
-timeline1
-.add("step1")
+
+let tl = gsap.timeline();
+tl
 .set(homeLogoSplit[0]["items"], {
-	opacity: 1,
-	ease: 'Power3.easeIn',
-	y: '200%'
+	y: '+=100%',
 }, 'switchtime')
 .to(homeLogoSplit[0]["items"], {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    y: '0%',
-    stagger: 0.04,
-}, "step1")
+	duration: 0.7,
+	ease: 'Power2.inOut',
+	y: '0%',
+	stagger: 0.10,
+}, 0)
 
 
 const homeTitle = document.querySelector('.home_title');
 const homeTitleSplit = Splitting({ target: homeTitle, by: 'chars' });
 homeTitle.parentElement.style.overflow = "hidden";
 
-timeline1
-.set(homeTitleSplit[0]["chars"], {
-	opacity: 1,
-	ease: 'Power3.easeIn',
-	y: '200%'
-}, 'switchtime')
-.to(homeTitleSplit[0]["chars"], {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    y: '0%',
-    stagger: 0.02,
+let chars = homeTitleSplit[0]["chars"]
+let lenght = homeTitleSplit[0]["words"].length;
+chars.forEach(char => {
+	let charIndex = getComputedStyle(char).getPropertyValue('--char-index');
+
+	tl
+	.set(char, {
+		opacity: 0,
+		y: `${80+(charIndex*6)}%`
+	}, "switchtime")
+	.to(char, {
+		duration: 0.6,
+		opacity: 1,
+		ease: 'circ.out',
+		y: '0%',
+	}, 0.4)
 })
 
 
 const homeText = document.querySelector(".presentation_text")
 const homeTextSplit = Splitting({ target: homeText, by: 'lines' });
-homeText.parentElement.style.overflow = "hidden";
+// homeText.parentElement.style.overflow = "hidden";
+let words = homeTextSplit[0]["words"]
+let len = homeTextSplit[0]["lines"].length;
 
-timeline1
-.add("texting")
-.set(homeTextSplit[0]["lines"][0], {
-	opacity: 1,
-	ease: 'easeIn',
-	y: '200%'
-}, 'switchtime')
-.to(homeTextSplit[0]["lines"][0],  {
-    duration: 0.5,
-    opacity: 1,
-    ease: 'easeIn',
-    y: '0%',
-}, "texting")
 
-.set(homeTextSplit[0]["lines"][1], {
-	opacity: 1,
-	ease: 'easeIn',
-	y: '200%'
-}, 'switchtime')
-.to(homeTextSplit[0]["lines"][1],  {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'easeIn',
-    y: '0%',
-},"texting")
+words.forEach(word => {
+	let lineNum = getComputedStyle(word).getPropertyValue('--line-index');
+	tl
+	.set(word, {
+		opacity: 0,
+		// y: `${}`%,
+		y: `${(len+1)*50+(lineNum*50)}%`
+	}, 'switchtime')
+	.to(word, {
+		duration: 1,
+		opacity: 1,
+		ease: 'power3.out',
+		y: '0%',
+	}, `<${1+lineNum*0.17})`)
+})
+
 
 
 const menuTitle = document.querySelector(".menu_title-text")
 const menuTitleSplit = Splitting({ target: menuTitle, by: 'chars' });
-menuTitle.parentElement.style.overflow = "hidden";
+// menuTitle.parentElement.style.overflow = "hidden";
 
-timeline1
+tl
 .set(menuTitleSplit[0]["chars"], {
-	opacity: 1,
+	opacity: 0,
 	ease: 'Power3.easeIn',
-	y: '200%'
+	// y: '200%'
 }, 'switchtime')
 .to(menuTitleSplit[0]["chars"], {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    y: '0%',
-    stagger: 0.02,
-})
+	duration: 1,
+	opacity: 1,
+	ease: 'Power3.easeOut',
+	y: '0%',
+	stagger: 0.02,
+}, 0)
+
+const menuSquare = document.querySelector(".menu_square")
+const menuSquareSplit = Splitting({ target: menuSquare, by: 'items' });
+// console.log(menuSquareSplit[0]["items"]);
+
+tl
+.set(menuSquareSplit[0]["items"], {
+	opacity: 0,
+	rotation: 80,
+}, 'switchtime')
+.to(menuSquareSplit[0]["items"], {
+	duration: 0.6,
+	rotation: 0,
+	opacity: 1,
+	ease: 'Power2.inOut',
+	y: '0%',
+	stagger: 0.02,
+}, 0)
 
 
 const menuDesign = document.querySelector(".menu_footer")
 const menuDesignSplit = Splitting({ target: menuDesign, by: 'items' });
 menuDesign.parentElement.style.overflow = "hidden";
-console.log(menuDesignSplit);
 
-timeline1
+tl
 .set(menuDesignSplit[0]["items"], {
-	opacity: 1,
-	ease: 'Power3.easeIn',
-	y: '200%'
+	opacity: 0,
 }, 'switchtime')
 .to(menuDesignSplit[0]["items"], {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    y: '0%',
-    stagger: 0.08,
-})
-// .set(menuDesignSplit[0]["items"][1], {
-// 	opacity: 1,
-// 	ease: 'Power3.easeIn',
-// 	y: '200%'
-// }, 'switchtime')
-// .to(menuDesignSplit[0]["items"][1], {
-//     duration: 0.5,
-//     opacity: 1,
-//     ease: 'Power3.easeOut',
-//     y: '0%',
-//     stagger: 0.02,
-// })
-
-
-
-
-
-
+	duration: 0.6,
+	opacity: 1,
+	ease: 'Power2.inOut',
+}, 0)
 
 
 const homeBorder = document.querySelector(".border_anim-1")
 
-let timeline2 = gsap.timeline();
-timeline2
+tl
 .set(homeBorder, {
-	opacity: 1,
-	ease: 'Power3.easeIn',
+	opacity: 0,
 	x: '100%'
 }, 'switchtime')
 .to(homeBorder, {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    x: '0%',
-    stagger: 0.02,
-})
+	duration: 0.6,
+	opacity: 1,
+	ease: 'Power2.inOut',
+	x: '0%',
+	stagger: 0.02,
+}, 0)
 
 const topMenuBorder = document.querySelector(".border_anim-2")
 
-let timeline3 = gsap.timeline();
-timeline3
+tl
 .set(topMenuBorder, {
-	opacity: 1,
-	ease: 'Power3.easeIn',
+	opacity: 0,
 	x: '-100%'
 }, 'switchtime')
 .to(topMenuBorder, {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    x: '0%',
-    stagger: 0.02,
-})
+	duration: 0.6,
+	opacity: 1,
+	ease: 'Power2.inOut',
+	x: '0%',
+	stagger: 0.02,
+}, 0)
 
 const leftMenuBorder = document.querySelector(".border_anim-3")
 
-let timeline4 = gsap.timeline();
-timeline4
+tl
 .set(leftMenuBorder, {
-	opacity: 1,
-	ease: 'Power3.easeIn',
+	opacity: 0,
 	y: '-100%'
 }, 'switchtime')
 .to(leftMenuBorder, {
-    duration: 0.8,
-    opacity: 1,
-    ease: 'Power3.easeOut',
-    y: '0%',
-    stagger: 0.02,
-})
+	duration: 0.6,
+	opacity: 1,
+	ease: 'Power2.inOut',
+	y: '0%',
+	stagger: 0.02,
+}, 0)

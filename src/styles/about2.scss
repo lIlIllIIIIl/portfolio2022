@@ -10,35 +10,42 @@
 
 .aboutContainer{
 	height: 100%;
-	align-items: center;
 	display: flex;
-	flex-direction: row;
-	margin-left: 10vw;
-	h1{
-		margin-right: 44px;
-	}
-	.aboutImage{
-		width: 88px;
-		height: 120px;
-		margin-right: 16px;
-		cursor: pointer;
+	// align-items: center;
+	flex-direction: column;
+	margin-left: 5.2vw;
+	.aboutData{
+		display: flex;
+		flex-direction: row;
+		h1{
+			margin-right: 44px;
+		}
+		.aboutImage{
+			width: 88px;
+			height: 120px;
+			margin-right: 15px;
+			cursor: pointer;
+		}
 	}
 }
 
 .aboutContainer-open{
 	height: 100%;
 	display: flex;
-	flex-direction: column;
 	display: none;
+	flex-direction: column;
 	justify-content: flex-end;
-	margin: 0 0 100px 74px;
+	padding: 0 0 90px 74px;
 	.aboutFullTitle-open{
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		margin-bottom: 5vh;
+		padding-bottom: 5vh;
+		.aboutTitle-open{
+			margin-right: 20px;
+		}
 		.aboutTitle-cross{
-			margin-left: 20px;
+			// margin-left: 20px;
 			background: black;
 		}
 		.aboutTitle-cross:hover{

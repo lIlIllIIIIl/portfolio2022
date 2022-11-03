@@ -6,7 +6,7 @@ $secColor: #F5EFF3;
 // ANIMATIONS
 
 h1{
-	overflow: hidden;
+	overflow-y: hidden;
 }
 
 @keyframes idk {
@@ -21,6 +21,16 @@ h1{
 .border_bottom{
 	position: absolute;
 	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: $mainColor;
+}
+
+.border_top{
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 1px;
 	background: $mainColor;
@@ -35,8 +45,15 @@ h1{
 	background: $mainColor;
 }
 
+
 // CSS
 
+*{
+	margin: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	// color: $secColor;
+}
 
 * ::-webkit-scrollbar{
 	display: none;
@@ -74,13 +91,6 @@ h1{
 }
 // 
 
-*{
-	margin: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
-	color: $secColor;
-}
-
 body{
 	background: $bgColor;
 	width: 100vw;
@@ -95,7 +105,7 @@ h1{
 		font-size: 70px;
 		font-weight: 100;
 		font-style: normal;
-		line-height: 60px;
+		// line-height: 60px;
 		letter-spacing: -3px;
 		color: $mainColor;
 		// animation: 1s ease-in-out 0s 1 idk;
@@ -121,15 +131,16 @@ h5{
 	color: $secColor;
 }
 
-span, div{
+// span, div{
 	// font-family: "Helvetica Neue";
-	font-family: neue-haas-grotesk-display, sans-serif;
-	font-weight: 300;
-	font-style: normal;
-	color: $secColor;
-}
+	// font-family: neue-haas-grotesk-display, sans-serif;
+	// font-weight: 300;
+	// font-style: normal;
+	// color: $secColor;
+// }
 
 a{
+	color: $secColor;
 	text-decoration: none;
 	cursor: pointer;
 }
@@ -164,6 +175,8 @@ header{
 	// padding-top: 4.2vw;
 	.headerLogo{
 		margin-bottom: 2.2vh;
+		display: inline-block;
+		width: fit-content;
 	}
 
 }
@@ -297,12 +310,13 @@ header{
 		}
 		.menu_square{
 			display: inline-block;
+			position: relative;
 			width: 17px;
 			height: 12px;
 			margin-left: 16px;
 			transition-duration: 0.8s;
-			border-top: solid 1px $mainColor;
-			border-bottom: solid 1px $mainColor;
+			// border-top: solid 1px $mainColor;
+			// border-bottom: solid 1px $mainColor;
 		}
 	}
 }
@@ -397,6 +411,7 @@ header{
 	}
 }
 .menu_footer{
+	color:$secColor;
 	margin-bottom: 4.5vh;
 	.menu_design{
 		display: flex;
@@ -428,7 +443,10 @@ header{
 	display: inline-block;
 	color: $secColor;
 	width: 25vw;
-	margin-top: 4.4vh;
+	margin-top: 3vh;
+	// .word{
+	// 	// display: none;
+	// }
 }
 
 .horizontal_blank1{
@@ -473,7 +491,7 @@ header{
 }
 
 .contact_mail{
-	display: flex;
+	// display: flex;
 	// flex-direction: row;
 	// align-items: center;
 	display: block;
@@ -484,6 +502,7 @@ header{
 		display: inline-block;
 	}
 	svg{
+		height: 100%;
 		margin-left: 1vw;
 	}
 	.contact_fill{

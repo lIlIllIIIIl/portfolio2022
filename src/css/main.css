@@ -1,5 +1,5 @@
 h1 {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 @-webkit-keyframes idk {
@@ -23,6 +23,16 @@ h1 {
 .border_bottom {
   position: absolute;
   bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #9E949C;
+}
+
+.border_top {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 1px;
   background: #9E949C;
@@ -34,6 +44,13 @@ h1 {
   width: 1px;
   height: 100%;
   background: #9E949C;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 * ::-webkit-scrollbar {
@@ -78,14 +95,6 @@ h1 {
   grid-gap: 0;
 }
 
-* {
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scroll-behavior: smooth;
-  color: #F5EFF3;
-}
-
 body {
   background: #000;
   width: 100vw;
@@ -100,7 +109,6 @@ h1 {
   font-size: 70px;
   font-weight: 100;
   font-style: normal;
-  line-height: 60px;
   letter-spacing: -3px;
   color: #9E949C;
 }
@@ -124,14 +132,8 @@ h5 {
   color: #F5EFF3;
 }
 
-span, div {
-  font-family: neue-haas-grotesk-display, sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  color: #F5EFF3;
-}
-
 a {
+  color: #F5EFF3;
   text-decoration: none;
   cursor: pointer;
 }
@@ -173,6 +175,10 @@ header {
 
 header .headerLogo {
   margin-bottom: 2.2vh;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .mainPage {
@@ -351,13 +357,12 @@ header .headerLogo {
 
 .menu .menu_top .menu_square {
   display: inline-block;
+  position: relative;
   width: 17px;
   height: 12px;
   margin-left: 16px;
   -webkit-transition-duration: 0.8s;
           transition-duration: 0.8s;
-  border-top: solid 1px #9E949C;
-  border-bottom: solid 1px #9E949C;
 }
 
 .menu_close {
@@ -473,6 +478,7 @@ header .headerLogo {
 }
 
 .menu_footer {
+  color: #F5EFF3;
   margin-bottom: 4.5vh;
 }
 
@@ -513,7 +519,7 @@ header .headerLogo {
   display: inline-block;
   color: #F5EFF3;
   width: 25vw;
-  margin-top: 4.4vh;
+  margin-top: 3vh;
 }
 
 .horizontal_blank1 {
@@ -553,9 +559,6 @@ header .headerLogo {
 }
 
 .contact_mail {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   display: block;
   padding-left: 16.4vw;
   background: black;
@@ -567,6 +570,7 @@ header .headerLogo {
 }
 
 .contact_mail svg {
+  height: 100%;
   margin-left: 1vw;
 }
 
