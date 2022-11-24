@@ -17,6 +17,7 @@
 	.aboutData{
 		display: flex;
 		flex-direction: row;
+		overflow: visible !important;
 		h1{
 			margin-right: 44px;
 		}
@@ -33,9 +34,11 @@
 	height: 100%;
 	display: flex;
 	display: none;
+	// opacity: 0;
 	flex-direction: column;
-	justify-content: flex-end;
-	padding: 0 0 90px 74px;
+	justify-content: flex-start;
+	// padding: 0 0 90px 74px;
+	padding-left:74px;
 	.aboutFullTitle-open{
 		display: flex;
 		flex-direction: row;
@@ -69,6 +72,8 @@
 		.aboutImage-open{
 			max-height: 380px;
 			max-width: 42vh;
+			// min-width: 19vw;
+			min-height: 40vh;
 		}
 		.aboutOthers{
 			display: flex;
@@ -102,6 +107,7 @@
 	}
 	.aboutText-open{
 		width: 25vw;
+		max-width: 320px;
 		margin-left: 4vw;
 	}
 }
@@ -148,21 +154,71 @@
 	}
 }
 
-@media screen and (max-width: 600px) {
+// @media screen and (max-width: 600px) {
+// 	.aboutContainer{
+// 		flex-direction: column;
+// 		align-items: normal;
+// 		justify-content: center;
+// 		margin: 0 15px;
+// 		.aboutImage{
+// 			margin: 5px;
+// 		}
+// 	}
+// 	.aboutContainer-open{
+// 		margin: 0;
+// 		justify-content: center;
+// 		margin: 0 20px;
+// 		.aboutInfos-open{
+// 			flex-direction: column;
+// 			.aboutInfos-group{
+// 				display: flex;
+// 				flex-direction: row;
+// 				margin-bottom: 200px;
+// 			}
+// 			.aboutText-open{
+// 				width: auto;
+// 			}
+// 			.aboutImage-open{
+// 				width: 88px;
+// 				height: 120px;
+// 			}
+// 			.aboutOthers{
+// 				overflow: scroll;
+// 				.aboutOther{
+// 					width: 66px;
+// 					height: 90px;
+// 				}
+// 			}
+// 		}
+// 	}
+// }
+@media screen and (max-aspect-ratio: 3/4) {
 	.aboutContainer{
 		flex-direction: column;
 		align-items: normal;
 		justify-content: center;
 		margin: 0 15px;
-		.aboutImage{
-			margin: 5px;
+		.horizontal_blank1{
+			display: none;
+		}
+		.aboutData{
+			flex-direction: column;
+			.aboutImage{
+				margin: 5px;
+			}
 		}
 	}
-
 	.aboutContainer-open{
 		margin: 0;
 		justify-content: center;
 		margin: 0 20px;
+		padding: 0;
+		.horizontal_blank1{
+			height: 17vw;
+		}
+		h1{
+			font-size: 49px;
+		}
 		.aboutInfos-open{
 			flex-direction: column;
 			.aboutInfos-group{
@@ -176,6 +232,7 @@
 			.aboutImage-open{
 				width: 88px;
 				height: 120px;
+				min-height: auto;
 			}
 			.aboutOthers{
 				overflow: scroll;

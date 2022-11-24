@@ -52,6 +52,6 @@ document.querySelectorAll('.mail').forEach((e) => {
 });
 
 const modText = function(){
-    console.log("lol");
+    // console.log("lol");
     click.textContent = "click to copy !"
 }

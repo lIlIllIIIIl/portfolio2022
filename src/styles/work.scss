@@ -5,6 +5,9 @@ $secColor: #F5EFF3;
 body {
 	scrollbar-width: none;
 	// height: 172vh;
+	.container{
+		overflow-y: hidden;
+	}
 	a{
 		cursor: pointer;
 	}
@@ -32,25 +35,30 @@ header{
 		height: 86.52vh;
 	}
 	.work_project1{
-		border-left: $secColor 0.1px solid;
+		// border-left: $secColor 0.1px solid;
 	}
 	.work_project{
+		position: relative;
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: flex-end;
-		border-right: $secColor 0.1px solid;
-		border-top: $secColor 0.1px solid;
+		// border-right: $secColor 0.1px solid;
+		// border-top: $mainColor 0.1px solid;
 		height: 86.52vh;
 		// max-width: 28vw;
 		.project_link{
 			height: 20vh;
-			margin: 4vh 2vw 5vh 2.5vw;
+			margin: 3.5vh 2vw 4vh 2.5vw;
 			.project_name{
 				display: inline-block;
+				line-height: 100%;
+				overflow: visible;
 			}
 		}
 			img{
 				height: 75%;
+				max-height: 580px;
+				max-width: 411px;
 			}
 	}
 }
@@ -70,7 +78,20 @@ header{
 
 // RESPONSIVE
 
-@media screen and (max-width: 450px) {
+// @media screen and (max-width: 450px) {
+// 	.work_project{
+// 		width: 83.9vw;
+// 		img{
+// 			object-fit: contain;
+// 			display: flex;
+// 			height: auto !important;
+// 		}
+// 		.blackk{
+// 			width: 10vw;
+// 		}
+// 	}
+// }
+@media screen and (max-aspect-ratio: 9/15) {
 	.work_project{
 		width: 83.9vw;
 		img{

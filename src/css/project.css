@@ -6,6 +6,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  font-family: neue-haas-grotesk-display, sans-serif;
 }
 
 .mainPage header {
@@ -40,9 +41,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   margin-right: 5vw;
   position: fixed;
 }
@@ -64,6 +65,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #F5EFF3;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -72,8 +74,9 @@
 }
 
 .project_global .project_infos .project_desc {
+  font-weight: 200;
   color: #F5EFF3;
-  width: 35vw;
+  width: 32vw;
 }
 
 .project_global .project_images {
@@ -84,7 +87,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 0 40vw;
+  padding: 0 45vw;
 }
 
 .project_global .project_images .project_im {
@@ -196,7 +199,7 @@
   background: #9E949C;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-aspect-ratio: 9 / 15) {
   .container {
     padding: 0;
     overflow-x: hidden;
@@ -215,7 +218,7 @@
     padding-left: 5.2vw;
     padding-top: 90px;
   }
-  .container .project_global .project_infos .project_inf, .container .project_global .project_infos .proJECT8DESC {
+  .container .project_global .project_infos .project_inf, .container .project_global .project_infos .project_desc {
     font-size: 13px;
   }
   .container .project_global .project_infos .project_desc {
@@ -256,9 +259,6 @@
     width: 100vh;
     height: 1px;
   }
-}
-
-@media screen and (max-width: 600px) {
   .project_next .project_next-link {
     width: 80vw;
   }

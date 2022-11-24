@@ -34,6 +34,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  overflow: visible !important;
 }
 
 .aboutContainer .aboutData h1 {
@@ -57,10 +58,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding: 0 0 90px 74px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 74px;
 }
 
 .aboutContainer-open .aboutFullTitle-open {
@@ -131,6 +132,7 @@
 .aboutContainer-open .aboutInfos-open .aboutImage-open {
   max-height: 380px;
   max-width: 42vh;
+  min-height: 40vh;
 }
 
 .aboutContainer-open .aboutInfos-open .aboutOthers {
@@ -183,6 +185,7 @@
 
 .aboutContainer-open .aboutText-open {
   width: 25vw;
+  max-width: 320px;
   margin-left: 4vw;
 }
 
@@ -235,7 +238,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 3 / 4) {
   .aboutContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -249,7 +252,16 @@
             justify-content: center;
     margin: 0 15px;
   }
-  .aboutContainer .aboutImage {
+  .aboutContainer .horizontal_blank1 {
+    display: none;
+  }
+  .aboutContainer .aboutData {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .aboutContainer .aboutData .aboutImage {
     margin: 5px;
   }
   .aboutContainer-open {
@@ -258,6 +270,13 @@
         -ms-flex-pack: center;
             justify-content: center;
     margin: 0 20px;
+    padding: 0;
+  }
+  .aboutContainer-open .horizontal_blank1 {
+    height: 17vw;
+  }
+  .aboutContainer-open h1 {
+    font-size: 49px;
   }
   .aboutContainer-open .aboutInfos-open {
     -webkit-box-orient: vertical;
@@ -281,6 +300,7 @@
   .aboutContainer-open .aboutInfos-open .aboutImage-open {
     width: 88px;
     height: 120px;
+    min-height: auto;
   }
   .aboutContainer-open .aboutInfos-open .aboutOthers {
     overflow: scroll;

@@ -31,7 +31,7 @@ h1 {
 
 .border_top {
   position: absolute;
-  top: 0;
+  z-index: 9;
   left: 0;
   width: 100%;
   height: 1px;
@@ -39,8 +39,18 @@ h1 {
 }
 
 .border_left {
+  z-index: 100;
   position: absolute;
   left: 0;
+  width: 1px;
+  height: 100%;
+  background: #9E949C;
+}
+
+.border_right {
+  z-index: 100;
+  position: absolute;
+  right: 0;
   width: 1px;
   height: 100%;
   background: #9E949C;
@@ -173,7 +183,7 @@ header {
   height: 13.48vh;
 }
 
-header .headerLogo {
+header .headerLogoSvg {
   margin-bottom: 2.2vh;
   display: inline-block;
   width: -webkit-fit-content;
@@ -410,7 +420,7 @@ header .headerLogo {
 
 .menu_open .menu_items .menu_item h3 {
   display: inline-block;
-  margin-right: 6.2vw;
+  margin-right: 4.2vw;
   line-height: 45px;
 }
 
@@ -432,12 +442,31 @@ header .headerLogo {
   width: 100%;
 }
 
+.menu_open .menu_footer .menu_design {
+  margin-left: 3vw;
+}
+
 .menu_open .menu_footer .ines {
   margin-top: 1.5vh;
+  font-size: 12px;
 }
 
 .menu_open .menu_footer .find_media {
   margin-top: 0.8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu_open .menu_footer .find_media svg {
+  margin-left: 0.5vw;
 }
 
 .menu .menu_items {
@@ -548,7 +577,7 @@ header .headerLogo {
 }
 
 .contact_intro .contact_text {
-  display: inline-block;
+  display: inline;
   color: #F5EFF3;
   width: 35.7vw;
   margin-top: 4.4vh;
@@ -559,9 +588,21 @@ header .headerLogo {
 }
 
 .contact_mail {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-left: 16.4vw;
   background: black;
+  position: relative;
   cursor: pointer;
 }
 
@@ -593,19 +634,19 @@ header .headerLogo {
   display: none;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-aspect-ratio: 4 / 5) {
   .presentation_text {
     width: 60vw;
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-aspect-ratio: 3 / 4) {
   .contact_mail {
     padding-left: 0;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 3 / 4) {
   .contact_intro .contact_text {
     width: 70vw;
   }
@@ -617,7 +658,7 @@ header .headerLogo {
   }
 }
 
-@media screen and (max-width: 300px) {
+@media screen and (max-aspect-ratio: 9 / 15) {
   div.contact_mail h1 {
     font-size: 46px;
   }

@@ -15,7 +15,7 @@
 <body class="mainPage">
 	<section class="container">
 		<header>
-			<a class="headerLogo" href="../../index.html">
+			<a class="headerLogoSvg" href="../../index.html">
 				<svg width="52" height="38" viewBox="0 0 52 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M27.1113 33.7983L16.3972 0H14.9997L4.37879 33.7983C3.49372 36.5225 2.70181 37.0304 0 37.0304V38H9.5495V37.0304C5.07754 37.0304 5.1707 36.4763 6.0092 33.7983L8.43151 26.0413H21.3816L23.8505 33.7983C24.6889 36.4763 24.7821 37.0304 20.3567 37.0304V38H31.4901V37.0304C28.7882 37.0304 27.9963 36.5225 27.1113 33.7983ZM8.89734 24.4714L14.8134 5.58688H14.9531L20.9157 24.4714H8.89734Z" fill="#9E949C"/>
 					<path d="M24.6558 5.49453V33.5674C24.6558 36.384 24.2832 37.0304 19.8112 37.0304V38H32.3886V37.0304C27.9166 37.0304 27.544 36.384 27.544 33.5674V5.49453C27.544 2.67801 27.9166 2.03159 32.3886 2.03159V1.06197H19.8112V2.03159C24.2832 2.03159 24.6558 2.67801 24.6558 5.49453ZM46.1306 34.5832L32.2954 17.7303L43.1493 4.47874C44.966 2.26245 46.2703 2.03159 48.9721 2.03159V1.06197H39.6555V2.03159C43.4287 2.03159 42.9163 2.26245 41.0996 4.47874L29.221 18.8846L42.3573 34.5832C44.1741 36.7995 44.7331 37.0304 41.0064 37.0304V38H52V37.0304C49.2982 37.0304 47.9473 36.7995 46.1306 34.5832Z" fill="#9E949C"/>
@@ -25,15 +25,18 @@
 
         <div class="project_global autre">
             <div class="project_infos">
-                <h1>Pimpim's adventure</h1>
-                <a class="highcap">Play the game</a>
+				<div class="horizontal_blank1"></div>
+                <h1 class="home_title anim_title">Pimpim's adventure</h1>
+                <a class="highcap anim_text">Play the game</a>
                 <div class="project_inf">
-                    <span class="highcap">completed: december 2021</span>
-                    <span class="highcap">role: unity developer</span>
-                    <span class="highcap">with: Chris francisco, elise vue, yann quillard</span>
+                    <span class="highcap anim_text">completed: december 2021</span>
+                    <span class="highcap anim_text">role: unity developer (C#)</span>
+                    <span class="highcap anim_text">with: Chris francisco, elise vue, yann quillard</span>
                 </div>
-                <div class="project_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed turpis vel morbi et enim. Enim, egestas rutrum diam bibendum convallis ipsum egestas. Pellentesque enim leo dui non ante. Imperdiet non sit dui auctor velit ornare nulla sed euismod.</div>
-            </div>
+                <div class="project_desc presentation_text anim_paragraphe">
+					PimPim’s adventure is a video game created with Blender and Unity. Embody PimPim, a pinguin who has to go through all four seasons to finally reach winter and his home.
+				</div>
+			</div>
 
 			<div class="project_images">
 				<div id="image-1" class="project_im">
@@ -76,11 +79,17 @@
 	</section>
 
 	<section class="menu menu_close">
+		<span class="border_left border_anim-3"></span>
 		<div class="menu_top">
-			<div class="menu_blank"></div>
+			<div class="menu_blank">
+				<span class="border_bottom border_anim-2"></span>
+			</div>
 			<div class="menu_title">
 				<h5 class="menu_title-text">MENU</h5>
-				<span class="menu_square"></span>
+				<span class="menu_square">
+					<span class="border_top"></span>
+					<span class="border_bottom"></span>
+				</span>
 			</div>
 			<div class="menu_items">
 				<a class="menu_item" href="../about2.html">
@@ -102,17 +111,21 @@
 			<div class="menu_find">
 				<span class="highcap smallcap">find me on:</span>
 				<span class="find_media">
+					<a href="https://github.com/lIlIllIIIIl" target="_blank">
 						<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.005 5.54216e-07C7.62938 -0.000790352 5.33108 0.844954 3.52155 2.38581C1.71202 3.92667 0.509417 6.06202 0.129056 8.40956C-0.251305 10.7571 0.215412 13.1635 1.44565 15.198C2.67588 17.2325 4.5893 18.7621 6.84333 19.5131C7.34018 19.606 7.52567 19.2959 7.52567 19.0323C7.52567 18.7936 7.51739 18.0043 7.51242 17.167C4.73006 17.7739 4.14377 15.9865 4.14377 15.9865C3.68833 14.8259 3.03248 14.5209 3.03248 14.5209C2.1249 13.8991 3.10204 13.9124 3.10204 13.9124C4.10568 13.9837 4.634 14.9437 4.634 14.9437C5.52667 16.4757 6.97417 16.033 7.54555 15.7727C7.63498 15.126 7.89334 14.685 8.17986 14.4346C5.95893 14.181 3.62373 13.3221 3.62373 9.48548C3.60885 8.49077 3.97784 7.52865 4.65387 6.79951C4.54953 6.54583 4.20671 5.52781 4.74993 4.14669C4.74993 4.14669 5.58961 3.87809 7.50083 5.173C9.14071 4.72422 10.8709 4.72422 12.5107 5.173C14.4186 3.87809 15.2583 4.14669 15.2583 4.14669C15.8015 5.52615 15.4604 6.54417 15.356 6.79951C16.0315 7.52891 16.3999 8.491 16.3845 9.48548C16.3845 13.3321 14.046 14.1793 11.8185 14.4264C12.1779 14.7364 12.4975 15.3466 12.4975 16.28C12.4975 17.6197 12.4859 18.6991 12.4859 19.029C12.4859 19.2943 12.6648 19.6076 13.1716 19.5082C15.4223 18.7543 17.3319 17.2238 18.5592 15.19C19.7864 13.1563 20.2512 10.752 19.8705 8.40671C19.4898 6.06145 18.2884 3.92816 16.4811 2.38809C14.6738 0.848025 12.3783 0.00156622 10.005 5.54216e-07Z" fill="#F5EFF3"/><path d="M3.79002 14.3752C3.76849 14.4266 3.69065 14.4398 3.62441 14.4067C3.55816 14.3736 3.51013 14.3057 3.53497 14.256C3.55982 14.2063 3.63434 14.1914 3.70059 14.2245C3.76684 14.2576 3.81321 14.3255 3.78837 14.3752H3.79002Z" fill="#F5EFF3"/><path d="M4.1949 14.8273C4.14687 14.872 4.05412 14.8522 3.99119 14.781C3.96074 14.7568 3.94069 14.7219 3.93515 14.6834C3.92961 14.6449 3.93899 14.6057 3.96138 14.5739C4.01106 14.5292 4.10049 14.5507 4.16674 14.6203C4.23299 14.6899 4.24458 14.7859 4.1949 14.8273Z" fill="#F5EFF3"/><path d="M4.59057 15.4043C4.5293 15.4473 4.42496 15.4043 4.36699 15.3182C4.30902 15.232 4.30571 15.1227 4.36699 15.0797C4.42827 15.0366 4.53261 15.0797 4.59057 15.1641C4.64854 15.2486 4.65185 15.3612 4.59057 15.4043Z" fill="#F5EFF3"/><path d="M5.1323 15.9614C5.07765 16.0227 4.96669 16.0061 4.8756 15.9233C4.78451 15.8405 4.76463 15.7279 4.81929 15.6683C4.87394 15.6087 4.9849 15.6236 5.07765 15.7064C5.1704 15.7892 5.19027 15.9018 5.1323 15.9614Z" fill="#F5EFF3"/><path d="M5.87552 16.285C5.85233 16.3628 5.73971 16.3992 5.62544 16.3661C5.51116 16.333 5.43829 16.2402 5.45982 16.1607C5.48135 16.0812 5.59728 16.0448 5.7099 16.0796C5.82252 16.1144 5.89705 16.2055 5.87552 16.285Z" fill="#F5EFF3"/><path d="M6.69459 16.3429C6.69459 16.4257 6.60185 16.4936 6.4826 16.4952C6.36336 16.4969 6.2673 16.4323 6.26565 16.3512C6.26399 16.27 6.36005 16.2005 6.47929 16.1971C6.59854 16.1938 6.69459 16.2617 6.69459 16.3429Z" fill="#F5EFF3"/><path d="M7.45596 16.2156C7.47086 16.2967 7.38806 16.3812 7.27047 16.4011C7.15288 16.421 7.04689 16.3729 7.03198 16.2918C7.01707 16.2106 7.10154 16.1262 7.21747 16.1063C7.3334 16.0864 7.44105 16.1344 7.45596 16.2156Z" fill="#F5EFF3"/></svg>
+					</a>
+					<a href="https://www.linkedin.com/in/alexis-kessab-7bb710162/" target="_blank">
 						<svg width="20" height="20" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path fill-rule="evenodd" clip-rule="evenodd" d="M0.813353 0C0.364185 0 0 0.35363 0 0.789136V10.2278C0 10.6633 0.364185 11.0166 0.813353 11.0166H10.191C10.6403 11.0166 11.0044 10.6633 11.0044 10.2277V0.789136C11.0044 0.35363 10.6403 0 10.191 0H0.813353ZM3.33542 4.24757V9.22219H1.67325V4.24757H3.33542ZM3.445 2.70907C3.445 3.18652 3.08416 3.56844 2.50467 3.56844H2.4938C1.93589 3.56844 1.57522 3.18652 1.57522 2.70907C1.57522 2.22098 1.94727 1.84954 2.51571 1.84954C3.08416 1.84954 3.43413 2.22098 3.445 2.70907ZM4.25585 9.22219H4.25534L4.25584 9.22236C4.25584 9.22236 4.25585 9.22231 4.25585 9.22219ZM5.91785 4.95198C6.13884 4.61372 6.5343 4.13092 7.41592 4.13092C8.50964 4.13092 9.32936 4.84201 9.32936 6.36985V9.22219H7.66735V6.56123C7.66735 5.89241 7.42662 5.43627 6.82539 5.43627C6.36585 5.43627 6.09233 5.7438 5.97222 6.04102C5.92839 6.14719 5.91735 6.29597 5.91735 6.44441V9.22219H4.25585C4.256 9.1907 4.27752 4.71206 4.25584 4.24774H5.91785V4.95198Z" fill="#F5EFF3"/>
 						</svg>
-						
+					</a>
 				</span>
 			</div>
 		</div>
 	</section>
 
 	<script type="text/javascript" src="../../scripts/menu.js"></script>
+	<script type="module" src="../../scripts/loadAnims.js"></script>
 	<script type="module" src="../../scripts/projectScroll.js"></script>
 </body>
 </html>

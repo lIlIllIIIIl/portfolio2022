@@ -6,7 +6,6 @@ $secColor: #F5EFF3;
 
 @media screen and (max-width: 600px) {
 	body {
-
         h1{
             font-family: "Editorial New";
             font-style: normal;
@@ -15,7 +14,6 @@ $secColor: #F5EFF3;
             letter-spacing: -2px;
             font-weight: 100;
         }
-        
         h5{
             font-size: 16px;
             font-weight: 100;
@@ -24,13 +22,10 @@ $secColor: #F5EFF3;
             // line-height: 20px;
             color: $secColor;
         }
-
         .arrow_link{
             height: 15%;
         }
-
     }
-
     .menu_close{
         // width: 55px;
         .menu_title{
@@ -42,7 +37,44 @@ $secColor: #F5EFF3;
             display: none;
         }
     }
+    .menu_open{
+        width: 75vw !important;
+    }
 
+}
+@media screen and (max-aspect-ratio: 9/18) {
+	body {
+        h1{
+            font-family: "Editorial New";
+            font-style: normal;
+            color: $mainColor;
+            font-size: 52px;
+            letter-spacing: -2px;
+            font-weight: 100;
+        }
+        h5{
+            font-size: 16px;
+            font-weight: 100;
+            font-family: "Helvetica Neue";
+            font-style: normal;
+            // line-height: 20px;
+            color: $secColor;
+        }
+        .arrow_link{
+            height: 15%;
+        }
+    }
+    .menu_close{
+        // width: 55px;
+        .menu_title{
+            .menu_title-text{
+                display: none !important;
+            }
+        }
+        .menu_footer{
+            display: none;
+        }
+    }
     .menu_open{
         width: 75vw !important;
     }
