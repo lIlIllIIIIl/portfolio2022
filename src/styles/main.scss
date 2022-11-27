@@ -2,6 +2,10 @@ $bgColor: #000;
 $mainColor: #9E949C;
 $secColor: #F5EFF3;
 
+@font-face{
+	font-family: EditorialNew;
+	src: url("../fonts/PPEditorialNew-Ultralight.woff2")
+}
 
 // ANIMATIONS
 
@@ -113,7 +117,8 @@ body{
 }
 
 h1{
-		font-family: "Editorial New";
+		font-family: EditorialNew;
+		// font-family: "Editor	ial New";
 		font-size: 70px;
 		font-weight: 100;
 		font-style: normal;
@@ -121,10 +126,11 @@ h1{
 		letter-spacing: -3px;
 		color: $mainColor;
 		// animation: 1s ease-in-out 0s 1 idk;
-}
-
-h3{
-	font-family: "Editorial New";
+	}
+	
+	h3{
+		font-family: EditorialNew;
+	// font-family: "Editorial New";
 	font-size: 50px;
 	font-weight: 100;
 	font-style: normal;
@@ -162,7 +168,7 @@ a{
 }
 
 .smallcap{
-	font-family: "Helvetica Neue";
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-size: 13px;
 	font-weight: 300;
 	font-style: normal;
@@ -170,7 +176,7 @@ a{
 }
 
 .text{
-	font-family: "Helvetica Neue";
+	font-family: neue-haas-grotesk-display, sans-serif;
 	font-size: 15px;
 	font-weight: 300;
 	font-style: normal;
@@ -230,7 +236,8 @@ header{
 			width: 20vw;
 			height: 10vh;
 			.loader-percent{
-				font-family: "Editorial New";
+				font-family: EditorialNew;
+				// font-family: "Editorial New";
 				font-size: 70px;
 				font-weight: 100;
 				font-style: normal;
@@ -276,36 +283,99 @@ header{
 
 
 .container{
+	position: relative;
 	height: 100vh;
 	width: 83.9vw;
 	padding-left: 5.2vw;
 }
 
+.container{
+	.outImages-container{
+		transition-duration: 0.5s;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		.outImage{
+			position: absolute;
+			width: 120px;
+			height: 162px;
+			transition-duration: 0.5s;
+			opacity: 0;
+			// z-index: 100;
+			aspect-ratio: 119/161;
+		}
+		:hover{
+			opacity: 100;
+			.outImage-image{
+				transition-duration: 0.5s;
+				transform: scale(1) translate(0, 0);
+			}
+		}
+		.outImage-image{
+			transition-duration: 0.5s;
+			width: 100%;
+			transform: scale(0.7) translate(0, 50px);
+			object-fit: cover;
+			aspect-ratio: 119/161;
+		}
+	}
+	.outImage-pimpim{
+		left: 8%;
+		top: 18%;
+	}
+	.outImage-manga{
+		left: 70%;
+		top: 15%;
+	}
+	.outImage-food{
+		left: 28%;
+		top: 25%;
+	}
+	.outImage-pousse{
+		left: 50%;
+		top: 20%;
+	}
+	.outImage-shortlink{
+		left: 7%;
+		top: 50%;
+	}
+	.outImage-uso{
+		left: 35%;
+		top: 50%;
+	}
+	.outImage-game{
+		left: -5%;
+		top: 70%;
+	}
+	.outImage-ines{
+		left: 22%;
+		top: 75%;
+	}
+	.outImage-music{
+		left: 50%;
+		top: 70%;
+	}
+	.outImage-winter{
+		left: 65%;
+		top: 64%;
+	}
+	.outImage-book{
+		left: 78%;
+		top: 42%;
+	}
+}
+
 .menu{
-	transition-duration: 0.8s;
 	position: fixed;
-    right: 0;
-    height: 100vh;
-    z-index: 10;
-    background: no-repeat url("../images/noir.jpg");
-	// border-left: 1px $mainColor solid;
 	display: flex;
+	right: 0;
+	height: 100vh;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	.menu_items a{
-		display: inline;
-		position: relative;
-		color: $mainColor;
-		margin-bottom: 1.8vh;
-		height: fit-content;
-	}
-	:hover{
-		cursor: pointer;
-	}
-	h5{
-		display: inline-block;
-	}
+	z-index: 1000;
+	background: #000;
+	// background: no-repeat url("../images/noir.jpg");
 	.menu_top{
 		width: 100%;
 		.menu_blank{
@@ -313,87 +383,111 @@ header{
 			width: 100%;
 			height: 4.44vh;
 			overflow: hidden;
-			// border-bottom: 1px $mainColor solid;
 		}
 		.menu_title{
 			margin-top: 2.4vh;
-			// width: 100%;
-			// width: auto;
+			:hover{
+				cursor: pointer;
+			}
+			.menu_title-text{
+				display: inline-block;
+			}
+			.menu_square{
+				display: inline-block;
+				position: relative;
+				width: 17px;
+				height: 12px;
+				margin-left: 16px;
+				transition-duration: 0.8s;
+			}
 		}
-		.menu_square{
-			display: inline-block;
-			position: relative;
-			width: 17px;
-			height: 12px;
-			margin-left: 16px;
-			transition-duration: 0.8s;
-			// border-top: solid 1px $mainColor;
-			// border-bottom: solid 1px $mainColor;
+		.menu_items{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			text-align: right;
+			margin-right: 5.2vw;
+			margin-top: 9.3vh;
+			a{
+				display: inline;
+				position: relative;
+				height: fit-content;
+				color: $mainColor;
+				margin-bottom: 1.8vh;
+			}
 		}
 	}
 }
 
 .menu_close{
 	width: 16.1vw;
-	.menu_items{
-		display: none;
-	}
 	.menu_title{
 		text-align: center;
 	}
+	.menu_items{
+		// display: none;
+		.menu_item{
+			transition-duration: 1s;
+			opacity: 0;
+		}
+	}
 }
 
-.underline_menu{
-	display: inline-block;
-	width: 100%;
-	height: 1px;
-	background: $mainColor;
-}
+// .underline_menu{
+// 	display: inline-block;
+// 	width: 100%;
+// 	height: 1px;
+// 	background: $mainColor;
+// }
 
 .menu_open{
 	width: 22vw;
-	.menu_items{
-		// display: block;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		text-align: right;
-		margin-top: 9.3vh;
-		margin-bottom: 2.5vh;
-		.menu_item{
-			display: inline;
-			h3{
-				display: inline-block;
-				// display: flex;
-				// justify-content: flex-end;
-				margin-right: 4.2vw;
-				line-height: 45px;
+	.menu_top{
+		.menu_items{
+			// display: block;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			text-align: right;
+			margin-right: 5.2vw;
+			margin-top: 9.3vh;
+			.menu_item{
+				display: inline;
+				opacity: 100;
+				transition-duration: 1s;
+				h3{
+					display: inline-block;
+					// display: flex;
+					// justify-content: flex-end;
+					line-height: 45px;
+				}
 			}
 		}
-	}
-	.menu_title{
-		text-align: right;
-		margin-right: 5.2vw;
+		.menu_title{
+			text-align: right;
+			margin-right: 5.2vw;
+			user-select: none;
+		}
 	}
 	.menu_footer{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-around;
-		width: 100%;
+		// display: flex;
+		// flex-direction: column;
+		// justify-content: space-around;
+		// width: 100%;
 		.menu_design{
-			margin-left: 3vw;
+			// margin-left: 3vw;
 		}
 		.ines{
-			margin-top: 1.5vh;
-			font-size: 12px;
+			// margin-top: 1.5vh;
+			// font-size: 12px;
 		}
 		.find_media{
-			margin-top: 0.8vh;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-end;
+			// margin-top: 0.8vh;
+			// display: flex;
+			// flex-direction: row;
+			// justify-content: flex-end;
 			svg{
-				margin-left: 0.5vw;
+				// margin-left: 0.5vw;
 			}
 		}
 
@@ -435,6 +529,10 @@ header{
 .menu_footer{
 	color:$secColor;
 	margin-bottom: 4.5vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	.menu_design{
 		display: flex;
 		flex-direction: column;
@@ -459,6 +557,10 @@ header{
 
 .home_arrow{
 	margin: 0 1vw;
+}
+
+.arrow_link{
+	margin-left: 8px;
 }
 
 .presentation_text{
@@ -583,7 +685,7 @@ header{
 // 		padding-left: 0;
 // 		span{
 
-// 			display: block;
+// 		display: block;
 // 		}
 // 	}
 // }

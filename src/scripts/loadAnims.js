@@ -163,10 +163,12 @@ tl
 
 const animTitle = document.querySelectorAll('.anim_title');
 let c = 0;
-// animTitle.parentElement.style.overflow = "hidden";
+console.log(animTitle);
+
 
 animTitle.forEach(title => {
 	let animTitleSplit = Splitting({ target: title	, by: 'chars' });
+	// title.parentElement.style.overflow = "hidden";
 
 	let chars = animTitleSplit[0]["chars"]
 	let lenght = animTitleSplit[0]["words"].length;
@@ -309,39 +311,60 @@ if (window.location.href.includes("work")){
 	let countArrows = 0
 	console.log(0.2+countArrows+timing);
 
-	arrows.forEach(arrow =>{
-		tl
-		.set(arrow, {
-			scale:(0.0),
-			y: "100%",
-			x: "-100%",
-		}, 'switchtime')
-		.to(arrow, {
-			duration: 0.2,
-			scale: (1),
-			y: "0",
-			x: "0",
-		}, 1.2+countArrows+timing)
-		.to(arrow, {
-			duration: 0.2,
-			scale: (0.0),
-			y: "-100%",
-			x: "100%",
-		}, ">-40%")
-		.to(arrow, {
-			duration: 0,
-			scale: (0.0),
-			y: "100%",
-			x: "-100%",
-		}, ">-10%")
-		.to(arrow, {
-			duration: 0.2,
-			scale: (1),
-			y: "0%",
-			x: "0%",
-		}, ">-10%")
-		countArrows += 0.2
-	})
+
+
+	tl
+	.set(arrows, {
+		scale:(0.0),
+		y: "100%",
+		x: "-100%",
+	}, "switchtime")
+	.to(arrows, {
+		duration: 0.4,
+		ease: "Power4.inOut",
+		scale: (1),
+		y: "0",
+		x: "0",
+		stagger: 0.13,
+	}, 1.2+timing)
+
+
+
+
+	// arrows.forEach(arrow =>{
+	// 	tl
+	// 	.set(arrow, {
+	// 		scale:(0.0),
+	// 		y: "100%",
+	// 		x: "-100%",
+	// 	}, 'switchtime')
+	// 	.to(arrow, {
+	// 		duration: 0.2,
+	// 		ease: "Power4.inOut",
+	// 		scale: (1),
+	// 		y: "0",
+	// 		x: "0",
+	// 	}, 1.2+countArrows+timing)
+		// .to(arrow, {
+		// 	duration: 0.2,
+		// 	scale: (0.0),
+		// 	y: "-100%",
+		// 	x: "100%",
+		// }, ">-40%")
+		// .to(arrow, {
+		// 	duration: 0,
+		// 	scale: (0.0),
+		// 	y: "100%",
+		// 	x: "-100%",
+		// }, ">-10%")
+		// .to(arrow, {
+		// 	duration: 0.2,
+		// 	scale: (1),
+		// 	y: "0%",
+		// 	x: "0%",
+		// }, ">-10%")
+		// countArrows += 0.2
+	// })
 
 
 }

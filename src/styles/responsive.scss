@@ -2,12 +2,17 @@ $bgColor: #000;
 $mainColor: #9E949C;
 $secColor: #F5EFF3;
 
+@font-face{
+	font-family: EditorialNew;
+	src: url("../fonts/PPEditorialNew-Ultralight.woff2")
+}
+
 // GLOBAL RESPONSIVE
 
 @media screen and (max-width: 600px) {
 	body {
         h1{
-            font-family: "Editorial New";
+            font-family: EditorialNew;
             font-style: normal;
             color: $mainColor;
             font-size: 52px;
@@ -45,7 +50,7 @@ $secColor: #F5EFF3;
 @media screen and (max-aspect-ratio: 9/18) {
 	body {
         h1{
-            font-family: "Editorial New";
+            font-family: EditorialNew;
             font-style: normal;
             color: $mainColor;
             font-size: 52px;

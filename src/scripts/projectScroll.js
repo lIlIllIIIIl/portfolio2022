@@ -19,22 +19,3 @@ const projectScroll = new LocomotiveScroll({
 		direction: "vertical",
     }
 })
-
-const bg = document.querySelector("#image-2")
-
-
-gsap.timeline({
-	scrollTrigger: {
-		trigger: "#image-2",
-		start: "center center",
-		end: "center center",
-		horizontal: true,
-		scrub: true,
-		pin: true,
-		markers: true,
-	},
-x: "100%",
-})
-// .from("#image-2", {
-// 	autoAlpha: 0,
-// })

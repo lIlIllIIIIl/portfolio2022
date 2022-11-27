@@ -1,6 +1,11 @@
+@font-face {
+  font-family: EditorialNew;
+  src: url("../fonts/PPEditorialNew-Ultralight.woff2");
+}
+
 @media screen and (max-width: 600px) {
   body h1 {
-    font-family: "Editorial New";
+    font-family: EditorialNew;
     font-style: normal;
     color: #9E949C;
     font-size: 52px;
@@ -30,7 +35,7 @@
 
 @media screen and (max-aspect-ratio: 9 / 18) {
   body h1 {
-    font-family: "Editorial New";
+    font-family: EditorialNew;
     font-style: normal;
     color: #9E949C;
     font-size: 52px;
