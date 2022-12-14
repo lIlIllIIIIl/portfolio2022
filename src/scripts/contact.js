@@ -21,15 +21,15 @@ function syncpointer(elem = click) {
 }
 
 document.addEventListener('mousemove', e => {
-	pointerPos.x = e.clientX-5
-	pointerPos.y = e.clientY-60
+	pointerPos.x = e.clientX-0
+	pointerPos.y = e.clientY-45
 	syncpointer(click)
 })
 
 mail.addEventListener("mouseover", e =>{
     click.classList.remove("not")
     mail.addEventListener("click", e => {
-        navigator.clipboard.writeText(mailText.textContent)
+        navigator.clipboard.writeText("alexis.kessab@gmail.com")
             .then(() => {
             console.log("Mail copied to clipboard.")
             click.textContent = "copied !";

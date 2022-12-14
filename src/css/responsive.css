@@ -2,7 +2,6 @@
   font-family: EditorialNew;
   src: url("../fonts/PPEditorialNew-Ultralight.woff2");
 }
-
 @media screen and (max-width: 600px) {
   body h1 {
     font-family: EditorialNew;
@@ -32,8 +31,7 @@
     width: 75vw !important;
   }
 }
-
-@media screen and (max-aspect-ratio: 9 / 18) {
+@media screen and (max-aspect-ratio: 9/18) {
   body h1 {
     font-family: EditorialNew;
     font-style: normal;
@@ -61,5 +59,4 @@
   .menu_open {
     width: 75vw !important;
   }
-}
-/*# sourceMappingURL=responsive.css.map */
+}/*# sourceMappingURL=responsive.css.map */

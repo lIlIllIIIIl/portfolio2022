@@ -58,12 +58,13 @@ $secColor: #F5EFF3;
 			display: flex;
 			height: 86.51vh;
 			width: auto;
-			aspect-ratio: 1054/790;
+			aspect-ratio: 1089/790;
 			// width: 80vw;
 			flex-direction: row;
 			.project_image{
-				width: 100%;
+				// width: 100%;
 				height: 100%;
+				// aspect-ratio: 1054/790;
 				// height: 86.51vh;
 				// width: fit-content;
 				border: solid 1px $mainColor;
@@ -73,7 +74,8 @@ $secColor: #F5EFF3;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-evenly;
-				width: 5vw;
+				width: 100%;
+				// width: 5vw;
 				height: 100%;
 				background: $bgColor;
 				span{

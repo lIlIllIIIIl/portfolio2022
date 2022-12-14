@@ -12,7 +12,7 @@ menu_click.addEventListener("click", (e)=>{
 	if (menu.classList[1] === "menu_close"){
 		menu.classList.replace("menu_close", "menu_open")
 		menu_square.style.transform="rotate(90deg)"
-		console.log(menu_square.childNodes);
+		// console.log(menu_square.childNodes);
 
 	}else if(menu.classList[1] === "menu_open"){
 		menu.classList.replace("menu_open", "menu_close")

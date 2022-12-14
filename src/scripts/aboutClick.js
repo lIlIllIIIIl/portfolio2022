@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import Splitting from "splitting";
 Splitting();
 
+let tl = gsap.timeline();
+
 const timing = 0.1
 
 const fullPage = document.querySelector(".mainPage")
@@ -22,6 +24,8 @@ const crossOne = cross.querySelector(".aboutTitle-cross :nth-child(1)")
 const crossTwo = cross.querySelector(".aboutTitle-cross :nth-child(2)")
 
 const aboutOthers = aboutOpen.querySelectorAll(".aboutOther")
+
+
 
 
 cross.addEventListener("click", function(e){
@@ -130,6 +134,13 @@ cross.addEventListener("click", function(e){
 // 	})
 // })
 
+function changeContent(titleOpen, elem, imageOpen, textOpen){
+	titleOpen.innerHTML = elem.alt
+	let src = elem.src.replace("small", "large")
+	imageOpen.src = src
+	textOpen.innerHTML = elem.getAttribute("desc")
+}
+
 aboutOthers.forEach(elem =>{
 	elem.addEventListener("click", function(e){
 		aboutOthers.forEach(remover =>{
@@ -137,15 +148,29 @@ aboutOthers.forEach(elem =>{
 		})
 		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
 		imageAff[1].classList.toggle("chosenOne")
+		tl
+		.set(aboutOpen, {
+			autoAlpha: 1,
+		})
+		.to(aboutOpen, {
+			autoAlpha: 0,
+			y: "10%",
+			ease: "Power4.inOut",
+		})
+		.call(changeContent, [titleOpen, elem, imageOpen, textOpen])
+		.to(aboutOpen, {
+			autoAlpha: 1,
+			y: "0%",
+			ease: "Power4.inOut",
+		})
 		about.style.display="none"
 		aboutOpen.style.display="flex"
-		titleOpen.innerHTML = elem.alt
-		let src = elem.src.replace("small", "large")
-		imageOpen.src = src
-		textOpen.innerHTML = elem.ariaValueMax
+		// titleOpen.innerHTML = elem.alt
+		// let src = elem.src.replace("small", "large")
+		// imageOpen.src = src
+		// textOpen.innerHTML = elem.getAttribute("desc")
 	})
 })
-
 
 
 images.forEach(elem =>{
@@ -153,12 +178,35 @@ images.forEach(elem =>{
 		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
 		imageAff[1].classList.toggle("chosenOne")
 		imageAff[2].classList.toggle("chosenOne")
-		about.style.display="none"
-		aboutOpen.style.display="flex"
+		tl
+		.set(about, {
+			autoAlpha: 1,
+		}, "switchtime")
+		.set(aboutOpen, {
+			autoAlpha: 0,
+			y: "10%"
+		})
+		.to(about, {
+			autoAlpha: 0,
+		}, "switchtime")
+		.to(about, {
+			display: "none",
+		}, "switchtime")
+		.to(aboutOpen, {
+			display: "flex",
+		})
+		.to(aboutOpen, {
+			autoAlpha: 1,
+			y: "0%",
+			ease: "Power4.inOut",
+		})
+		// about.style.display="none"
+		// aboutOpen.style.display="flex"
 		titleOpen.innerHTML = elem.alt
 		let src = elem.src.replace("small", "large")
 		imageOpen.src = src
-		textOpen.innerHTML = elem.ariaValueMax
+		// textOpen.innerHTML = elem.ariaValueMax
+		textOpen.innerHTML = elem.getAttribute("desc")
 		return aboutTitleSplit = Splitting({ target: titleOpen, by: 'chars' });
 	})
 })

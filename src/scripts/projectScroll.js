@@ -15,6 +15,7 @@ const projectScroll = new LocomotiveScroll({
     direction: "horizontal",
     gestureDirection: "both",
     reloadOnContextChange: "true",
+    multiplier: 0.8,
     smartphone: {
 		direction: "vertical",
     }

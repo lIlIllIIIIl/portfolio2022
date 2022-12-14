@@ -45,9 +45,13 @@ header{
 		height: 86.52vh;
 		// max-width: 28vw;
 		.project_link{
+			display: flex;
+			align-items: flex-end;
 			height: 20vh;
-			margin: 3.5vh 2vw 4vh 2.5vw;
+			margin: 3.5vh 2vw 3vh 2.5vw;
+			// margin: 3.5vh 2vw 4vh 2.5vw;
 			.project_name{
+				font-size: 8vh;
 				display: inline-block;
 				line-height: 100%;
 				overflow: visible;
@@ -70,7 +74,7 @@ header{
 }
 
 .last_project{
-	margin-right: 25vw;
+	margin-right: 20vw;
 }
 
 

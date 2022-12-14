@@ -1,11 +1,9 @@
 body {
   scrollbar-width: none;
 }
-
 body .container {
   overflow-y: hidden;
 }
-
 body a {
   cursor: pointer;
 }
@@ -16,51 +14,38 @@ header {
 
 .work_global {
   z-index: -10;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 86.52vh;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .work_global #works {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: 86.52vh;
 }
-
 .work_global .work_project {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   height: 86.52vh;
 }
-
 .work_global .work_project .project_link {
+  display: flex;
+  align-items: flex-end;
   height: 20vh;
-  margin: 3.5vh 2vw 4vh 2.5vw;
+  margin: 3.5vh 2vw 3vh 2.5vw;
 }
-
 .work_global .work_project .project_link .project_name {
+  font-size: 8vh;
   display: inline-block;
   line-height: 100%;
   overflow: visible;
 }
-
 .work_global .work_project img {
   height: 75%;
   max-height: 580px;
@@ -68,31 +53,26 @@ header {
 }
 
 .work_project-blank {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   z-index: 1500;
   background: red;
 }
 
 .last_project {
-  margin-right: 25vw;
+  margin-right: 20vw;
 }
 
-@media screen and (max-aspect-ratio: 9 / 15) {
+@media screen and (max-aspect-ratio: 9/15) {
   .work_project {
     width: 83.9vw;
   }
   .work_project img {
     -o-object-fit: contain;
        object-fit: contain;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     height: auto !important;
   }
   .work_project .blackk {
     width: 10vw;
   }
-}
-/*# sourceMappingURL=work.css.map */
+}/*# sourceMappingURL=work.css.map */

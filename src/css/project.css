@@ -1,14 +1,8 @@
 .mainPage {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   font-family: neue-haas-grotesk-display, sans-serif;
 }
-
 .mainPage header {
   border: 0;
 }
@@ -18,36 +12,21 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   border-top: solid 1px #9E949C;
 }
-
 .project_global .idk {
   width: 40vw;
 }
-
 .project_global .project_infos {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  flex-direction: column;
+  justify-content: start;
   margin-right: 5vw;
   position: fixed;
 }
-
 .project_global .project_infos a {
   color: #9E949C;
   margin-bottom: 4vh;
@@ -56,82 +35,50 @@
   width: -moz-fit-content;
   width: fit-content;
 }
-
 .project_global .project_infos a:hover {
   text-decoration: underline;
 }
-
 .project_global .project_infos .project_inf {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   color: #F5EFF3;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 4vh;
 }
-
 .project_global .project_infos .project_desc {
   font-weight: 200;
   color: #F5EFF3;
   width: 32vw;
 }
-
 .project_global .project_images {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   padding: 0 45vw;
 }
-
 .project_global .project_images .project_im {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 86.51vh;
   width: auto;
-  aspect-ratio: 1054/790;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  aspect-ratio: 1089/790;
+  flex-direction: row;
 }
-
 .project_global .project_images .project_im .project_image {
-  width: 100%;
   height: 100%;
   border: solid 1px #9E949C;
   border-top: 0;
 }
-
 .project_global .project_images .project_im .project_image-blank {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  width: 5vw;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
   height: 100%;
   background: #000;
 }
-
 .project_global .project_images .project_im .project_image-blank span {
   width: 1px;
   height: 86.51vh;
   background: #9E949C;
 }
-
 .project_global .project_black {
   width: 40vw;
   height: 1px;
@@ -139,71 +86,46 @@
 
 .project_next {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
   cursor: pointer;
   border-left: 1px solid #9E949C;
 }
-
 .project_next .project_next-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   display: inline;
   margin-left: 2vw;
   width: 25vw;
 }
-
 .project_next .project_next-link h1 {
   margin-bottom: 5vh;
 }
-
 .project_next .project_next-link svg {
   margin-left: 5px;
 }
-
 .project_next .project_next-link .project_next-text1 {
   display: inline;
   width: 25vw;
 }
-
 .project_next .project_next-link .project_next-text2 {
   display: inline;
   width: 25vw;
 }
-
 .project_next .project_next-lines {
   height: 40vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
-
 .project_next .project_next-lines .project_next-line {
   height: 1px;
   width: 100vw;
   background: #9E949C;
 }
 
-@media screen and (max-aspect-ratio: 9 / 15) {
+@media screen and (max-aspect-ratio: 9/15) {
   .container {
     padding: 0;
     overflow-x: hidden;
@@ -212,10 +134,7 @@
     padding-left: 5.2vw;
   }
   .container .project_global {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .container .project_global .project_infos {
     position: initial;
@@ -229,20 +148,14 @@
     width: 70vw;
   }
   .container .project_global .project_images {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0;
   }
   .container .project_global .project_images #image-1 {
     margin-top: 100px;
   }
   .container .project_global .project_images .project_im {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 93.9vw;
   }
   .container .project_global .project_images .project_im .project_image {
@@ -254,10 +167,7 @@
     border-top: solid #9E949C 1px;
   }
   .container .project_global .project_images .project_im .project_image-blank {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     height: 5vh;
   }
   .container .project_global .project_images .project_im .project_image-blank .project_image-blank-line {
@@ -270,5 +180,4 @@
   .project_next .project_next-lines {
     height: 30vh;
   }
-}
-/*# sourceMappingURL=project.css.map */
+}/*# sourceMappingURL=project.css.map */

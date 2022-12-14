@@ -1,46 +1,30 @@
 .container {
   overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding-left: 0;
 }
-
 .container header {
   margin-left: 5.2vW;
+}
+.container h1 {
+  overflow: visible;
 }
 
 .aboutContainer {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-left: 5.2vw;
 }
-
 .aboutContainer .aboutData {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   overflow: visible !important;
 }
-
 .aboutContainer .aboutData h1 {
   margin-right: 44px;
 }
-
 .aboutContainer .aboutData .aboutImage {
   width: 88px;
   height: 120px;
@@ -50,139 +34,76 @@
 
 .aboutContainer-open {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
   padding-left: 74px;
 }
-
 .aboutContainer-open .aboutFullTitle-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   padding-bottom: 5vh;
 }
-
 .aboutContainer-open .aboutFullTitle-open .aboutTitle-open {
   margin-right: 20px;
 }
-
 .aboutContainer-open .aboutFullTitle-open .aboutTitle-cross {
   background: black;
 }
-
 .aboutContainer-open .aboutFullTitle-open .aboutTitle-cross:hover {
   cursor: pointer;
 }
-
 .aboutContainer-open .aboutInfos-open {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutInfos-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: row;
+  flex-grow: 1;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutInfos-group .aboutInfos-group-sub {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutImage-open {
   max-height: 380px;
   max-width: 42vh;
   min-height: 40vh;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
   margin-right: 30px;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers .aboutOther {
   height: 90px;
   width: auto;
   margin: 0 5px;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers .aboutOther:hover {
   cursor: pointer;
-  -webkit-filter: grayscale(0) !important;
-          filter: grayscale(0) !important;
+  filter: grayscale(0) !important;
   opacity: 1 !important;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers .notChosen {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
+  filter: grayscale(1);
   opacity: 0.5;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers .chosenOne {
-  -webkit-filter: grayscale(0) !important;
-          filter: grayscale(0) !important;
+  filter: grayscale(0) !important;
   opacity: 1 !important;
 }
-
 .aboutContainer-open .aboutInfos-open .aboutOthers-2 {
   display: none;
 }
-
 .aboutContainer-open .aboutText-open {
   width: 25vw;
   max-width: 320px;
@@ -191,84 +112,55 @@
 
 @media screen and (max-width: 950px) {
   .aboutContainer-open {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin: 0 0 0 74px;
   }
   .aboutOthers-1 {
     display: none !important;
   }
   .aboutOthers-2 {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
   }
   .aboutContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: normal;
-        -ms-flex-align: normal;
-            align-items: normal;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
     margin: 0 15px;
   }
   .aboutContainer .aboutImage {
     margin: 5px;
   }
   .aboutInfos-open {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
+    flex-direction: column !important;
   }
   .aboutInfos-open .aboutOthers {
     overflow: scroll;
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    justify-content: flex-start !important;
   }
   .aboutInfos-open .aboutOthers .aboutOther {
     width: 66px;
     height: 90px;
   }
 }
-
-@media screen and (max-aspect-ratio: 3 / 4) {
+@media screen and (max-aspect-ratio: 3/4) {
   .aboutContainer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: normal;
-        -ms-flex-align: normal;
-            align-items: normal;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: center;
     margin: 0 15px;
   }
   .aboutContainer .horizontal_blank1 {
     display: none;
   }
   .aboutContainer .aboutData {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .aboutContainer .aboutData .aboutImage {
     margin: 5px;
   }
   .aboutContainer-open {
     margin: 0;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin: 0 20px;
     padding: 0;
   }
@@ -279,19 +171,11 @@
     font-size: 49px;
   }
   .aboutContainer-open .aboutInfos-open {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .aboutContainer-open .aboutInfos-open .aboutInfos-group {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     margin-bottom: 200px;
   }
   .aboutContainer-open .aboutInfos-open .aboutText-open {
@@ -309,5 +193,4 @@
     width: 66px;
     height: 90px;
   }
-}
-/*# sourceMappingURL=about2.css.map */
+}/*# sourceMappingURL=about2.css.map */
