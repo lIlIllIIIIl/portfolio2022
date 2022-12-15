@@ -30,6 +30,7 @@ const aboutOthers = aboutOpen.querySelectorAll(".aboutOther")
 
 cross.addEventListener("click", function(e){
 	let tl = gsap.timeline({ onComplete: () => gsap.set(".aboutContainer-open", {clearProps: true}) });
+
 	let mainTitle = document.querySelectorAll('.anim_title');
 	let images = document.querySelectorAll(".aboutImage")
 	let aboutImages = document.querySelectorAll(".aboutAnim")
@@ -83,6 +84,7 @@ cross.addEventListener("click", function(e){
 	.to(crossTwo, {
 		rotation: 0,
 	}, ">0")
+
 
 	mainChars.forEach(char => {
 		let charIndex = getComputedStyle(char).getPropertyValue('--char-index');
