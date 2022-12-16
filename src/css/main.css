@@ -171,7 +171,12 @@ header {
   justify-content: flex-end;
   height: 13.48vh;
 }
-header .headerLogoSvg {
+header .logoLink {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+header .logoLink .headerLogoSvg {
   margin-bottom: 2.2vh;
   display: inline-block;
   width: -webkit-fit-content;
@@ -263,6 +268,10 @@ header .headerLogoSvg {
   height: 100vh;
   width: 83.9vw;
   padding-left: 5.2vw;
+}
+.container .mainContent {
+  display: flex;
+  flex-direction: column;
 }
 
 .container .outImages-container {
@@ -573,10 +582,13 @@ header .headerLogoSvg {
 }
 
 .click {
+  padding: 0 2px;
   cursor: pointer;
   position: absolute;
   transition: 0.5s ease-out;
   color: #F5EFF3;
+  background: #000;
+  z-index: 10000;
 }
 
 .not {
@@ -604,7 +616,10 @@ header .headerLogoSvg {
     display: block;
   }
 }
-@media screen and (max-aspect-ratio: 9/15) {
+@media screen and (max-aspect-ratio: 9/14) {
+  .outImages-container {
+    display: none;
+  }
   div.contact_mail h1 {
     font-size: 46px;
   }

@@ -27,7 +27,8 @@ $secColor: #F5EFF3;
 		flex-direction: column;
 		justify-content: start;
 		margin-right: 5vw;
-		position: fixed;
+		// position: fixed;
+		// z-index: 100;
 		// position: sticky;
 		a{
 			color: $mainColor;
@@ -45,7 +46,7 @@ $secColor: #F5EFF3;
 			margin-bottom: 4vh;
 		}
 		.project_desc{
-			font-weight: 200;
+			font-weight: 300;
 			color: $secColor;
 			width: 32vw;
 		}
@@ -53,7 +54,7 @@ $secColor: #F5EFF3;
 	.project_images{
 		display: flex;
 		flex-direction: row;
-		padding: 0 45vw;
+		// padding: 0 45vw;
 		.project_im{
 			display: flex;
 			height: 86.51vh;
@@ -188,7 +189,7 @@ $secColor: #F5EFF3;
 //         }
 //     }
 // }
-@media screen and (max-aspect-ratio: 9/15) {
+@media screen and (max-aspect-ratio: 9/14) {
 // @media screen and (max-aspect-ratio: 9/18) {
 	.container{
 		padding: 0;
@@ -218,6 +219,7 @@ $secColor: #F5EFF3;
 				.project_im{
 					flex-direction: column;
 					width: 93.9vw;
+					height: auto;
 					.project_image{
 						// width: 20px;
 						width: 100%;
@@ -239,6 +241,7 @@ $secColor: #F5EFF3;
 		}
 	}
 	.project_next{
+		height: auto;
 		.project_next-link{
 			width: 80vw;
 		}

@@ -154,7 +154,7 @@ aboutOthers.forEach(elem =>{
 		})
 		.to(aboutOpen, {
 			autoAlpha: 0,
-			y: "10%",
+			y: "-10%",
 			ease: "Power4.inOut",
 		})
 		.call(changeContent, [titleOpen, elem, imageOpen, textOpen])

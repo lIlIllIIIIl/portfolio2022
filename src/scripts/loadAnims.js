@@ -89,8 +89,7 @@ animTitle.forEach(title => {
 	c += 0.1;
 })
 
-
-if (window.location.href.includes("index") || window.location.href.includes("contact") || window.location.href === "http://localhost:1234/" || window.location.href === "https://alexis-kessab.com/"){
+if (window.location.href.includes("index") || window.location.href.includes("contact") || window.location.href === "http://localhost:1234/" || window.location.href === "https://alexis-kessab.com/" || window.location.href === "http://alexis-kessab.com/"){
 
 	const animText = document.querySelector(".anim_text")
 	const animTextSplit = Splitting({ target: animText, by: 'lines' });
@@ -145,6 +144,7 @@ if (window.location.href.includes("contact")){
 	const mailSplit = Splitting({ target: mail, by: 'lines' });
 	let words = mailSplit[0]["words"]
 	let len = mailSplit[0]["lines"].length;
+	const arrow = document.querySelector(".contact_arrow")
 
 	words.forEach(word => {
 		let lineNum = getComputedStyle(word).getPropertyValue('--line-index');
@@ -160,6 +160,21 @@ if (window.location.href.includes("contact")){
 			y: '0%',
 		}, `<${1.5+lineNum*0.17})`)
 	})
+	tl
+	.set(arrow, {
+		scale:(0.0),
+		y: "100%",
+		x: "-100%",
+	}, "switchtime")
+	.to(arrow, {
+		duration: 0.4,
+		ease: "Power4.inOut",
+		scale: (1),
+		y: "0",
+		x: "0",
+		stagger: 0.13,
+	}, ">2")
+
 
 }
 
@@ -229,42 +244,6 @@ if (window.location.href.includes("work")){
 	}, 1.2+timing)
 
 
-
-
-	// arrows.forEach(arrow =>{
-	// 	tl
-	// 	.set(arrow, {
-	// 		scale:(0.0),
-	// 		y: "100%",
-	// 		x: "-100%",
-	// 	}, 'switchtime')
-	// 	.to(arrow, {
-	// 		duration: 0.2,
-	// 		ease: "Power4.inOut",
-	// 		scale: (1),
-	// 		y: "0",
-	// 		x: "0",
-	// 	}, 1.2+countArrows+timing)
-		// .to(arrow, {
-		// 	duration: 0.2,
-		// 	scale: (0.0),
-		// 	y: "-100%",
-		// 	x: "100%",
-		// }, ">-40%")
-		// .to(arrow, {
-		// 	duration: 0,
-		// 	scale: (0.0),
-		// 	y: "100%",
-		// 	x: "-100%",
-		// }, ">-10%")
-		// .to(arrow, {
-		// 	duration: 0.2,
-		// 	scale: (1),
-		// 	y: "0%",
-		// 	x: "0%",
-		// }, ">-10%")
-		// countArrows += 0.2
-	// })
 
 
 }
@@ -461,3 +440,43 @@ if (window.location.href.includes("index.html") || window.location.href === "htt
 
 	}
 }
+
+
+
+
+
+
+	// arrows.forEach(arrow =>{
+	// 	tl
+	// 	.set(arrow, {
+	// 		scale:(0.0),
+	// 		y: "100%",
+	// 		x: "-100%",
+	// 	}, 'switchtime')
+	// 	.to(arrow, {
+	// 		duration: 0.2,
+	// 		ease: "Power4.inOut",
+	// 		scale: (1),
+	// 		y: "0",
+	// 		x: "0",
+	// 	}, 1.2+countArrows+timing)
+		// .to(arrow, {
+		// 	duration: 0.2,
+		// 	scale: (0.0),
+		// 	y: "-100%",
+		// 	x: "100%",
+		// }, ">-40%")
+		// .to(arrow, {
+		// 	duration: 0,
+		// 	scale: (0.0),
+		// 	y: "100%",
+		// 	x: "-100%",
+		// }, ">-10%")
+		// .to(arrow, {
+		// 	duration: 0.2,
+		// 	scale: (1),
+		// 	y: "0%",
+		// 	x: "0%",
+		// }, ">-10%")
+		// countArrows += 0.2
+	// })
