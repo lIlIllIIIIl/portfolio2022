@@ -6,7 +6,8 @@ body {
 	scrollbar-width: none;
 	// height: 172vh;
 	.container{
-		overflow-y: hidden;
+		// overflow-y: hidden;
+		height: 100vh;
 	}
 	a{
 		cursor: pointer;
@@ -29,6 +30,7 @@ header{
 	display: flex;
 	height: 86.52vh;
 	width: fit-content;
+	border-top: $mainColor 1px solid;
 	#works{
 		display: flex;
 		width: fit-content;
@@ -40,8 +42,7 @@ header{
 		display: flex;
 		flex-direction: column-reverse;
 		justify-content: flex-end;
-		// border-right: $secColor 0.1px solid;
-		// border-top: $mainColor 0.1px solid;
+		min-width: 30vh;
 		height: 86.52vh;
 		// max-width: 28vw;
 		.project_link{
@@ -50,6 +51,10 @@ header{
 			height: 20vh;
 			margin: 3.5vh 2vw 3vh 2.5vw;
 			// margin: 3.5vh 2vw 4vh 2.5vw;
+			.arrow_link{
+				width: 30px;
+				overflow: visible;
+			}
 			.project_name{
 				font-size: 8vh;
 				display: inline-block;
@@ -93,16 +98,28 @@ header{
 // 		}
 // 	}
 // }
-@media screen and (max-aspect-ratio: 9/15) {
-	.work_project{
-		width: 83.9vw;
-		img{
-			object-fit: contain;
-			display: flex;
-			height: auto !important;
+@media screen and (max-aspect-ratio: 9/14) {
+	.container{
+		overflow-y: hidden;
+		header{
+			position: fixed;
 		}
-		.blackk{
-			width: 10vw;
+		.work_global{
+			margin-top: 13.46vh;
+			.work_project{
+				width: 83.9vw;
+				.project_link{
+					margin: 0 2vw;
+				}
+				img{
+					object-fit: contain;
+					display: flex;
+					height: auto !important;
+				}
+				.blackk{
+					width: 10vw;
+				}
+			}
 		}
 	}
 }

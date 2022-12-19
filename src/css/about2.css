@@ -34,7 +34,6 @@
 
 .aboutContainer-open {
   height: 100%;
-  display: flex;
   display: none;
   flex-direction: column;
   justify-content: flex-start;

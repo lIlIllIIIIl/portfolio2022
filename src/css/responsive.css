@@ -10,10 +10,11 @@
     font-size: 52px;
     letter-spacing: -2px;
     font-weight: 100;
+    line-height: 1;
   }
   body h5 {
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
     font-family: "Helvetica Neue";
     font-style: normal;
     color: #F5EFF3;
@@ -30,8 +31,11 @@
   .menu_open {
     width: 75vw !important;
   }
+  .menu_open .menu_footer {
+    margin-bottom: 12vh;
+  }
 }
-@media screen and (max-aspect-ratio: 9/18) {
+@media screen and (max-aspect-ratio: 9/14) {
   body h1 {
     font-family: EditorialNew;
     font-style: normal;
@@ -39,16 +43,17 @@
     font-size: 52px;
     letter-spacing: -2px;
     font-weight: 100;
+    line-height: 1;
   }
   body h5 {
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 200;
     font-family: "Helvetica Neue";
     font-style: normal;
     color: #F5EFF3;
   }
-  body .arrow_link {
-    height: 15%;
+  body .horizontal_blank1 {
+    height: 10vh;
   }
   .menu_close .menu_title .menu_title-text {
     display: none !important;
@@ -56,7 +61,10 @@
   .menu_close .menu_footer {
     display: none;
   }
-  .menu_open {
+  .menu.menu_open {
     width: 75vw !important;
+  }
+  .menu.menu_open .menu_top .menu_items a.menu_item {
+    margin-bottom: 3vh;
   }
 }/*# sourceMappingURL=responsive.css.map */

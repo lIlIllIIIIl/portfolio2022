@@ -18,10 +18,11 @@ $secColor: #F5EFF3;
             font-size: 52px;
             letter-spacing: -2px;
             font-weight: 100;
+            line-height: 1;
         }
         h5{
             font-size: 16px;
-            font-weight: 100;
+            font-weight: 200;
             font-family: "Helvetica Neue";
             font-style: normal;
             // line-height: 20px;
@@ -44,10 +45,14 @@ $secColor: #F5EFF3;
     }
     .menu_open{
         width: 75vw !important;
+        .menu_footer{
+            margin-bottom: 12vh;
+        }
     }
 
+
 }
-@media screen and (max-aspect-ratio: 9/18) {
+@media screen and (max-aspect-ratio: 9/14) {
 	body {
         h1{
             font-family: EditorialNew;
@@ -56,17 +61,18 @@ $secColor: #F5EFF3;
             font-size: 52px;
             letter-spacing: -2px;
             font-weight: 100;
+            line-height: 1;
         }
         h5{
             font-size: 16px;
-            font-weight: 100;
+            font-weight: 200;
             font-family: "Helvetica Neue";
             font-style: normal;
             // line-height: 20px;
             color: $secColor;
         }
-        .arrow_link{
-            height: 15%;
+        .horizontal_blank1{
+            height: 10vh;
         }
     }
     .menu_close{
@@ -80,8 +86,14 @@ $secColor: #F5EFF3;
             display: none;
         }
     }
-    .menu_open{
+    .menu.menu_open{
         width: 75vw !important;
+        .menu_top{
+            .menu_items {
+                a.menu_item{
+                    margin-bottom: 3vh;
+                }
+            }
+        }
     }
-
 }

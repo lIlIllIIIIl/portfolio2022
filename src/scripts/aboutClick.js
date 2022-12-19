@@ -14,6 +14,7 @@ const about = document.querySelector(".aboutContainer")
 const images = about.querySelectorAll(".aboutImage")
 
 const aboutOpen = document.querySelector(".aboutContainer-open")
+const aboutFullTitle = document.querySelector(".aboutFullTitle-open")
 const titleOpen = aboutOpen.querySelector(".aboutTitle-open")
 let aboutTitleSplit
 const imageOpen = aboutOpen.querySelector(".aboutImage-open")
@@ -66,7 +67,6 @@ cross.addEventListener("click", function(e){
 		rotation: -45,
 		transformOrigin: "50% 50%"
 	}, "<")
-
 	.to(aboutOpen, {
 		duration: 0.5,
 		autoAlpha: 0,
@@ -149,20 +149,43 @@ aboutOthers.forEach(elem =>{
 		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
 		imageAff[1].classList.toggle("chosenOne")
 		tl
-		.set(aboutOpen, {
-			autoAlpha: 1,
-		})
-		.to(aboutOpen, {
+		.to(imageOpen, {
 			autoAlpha: 0,
-			y: "-10%",
+			y: "-40px",
 			ease: "Power4.inOut",
 		})
+		.to(textOpen, {
+			autoAlpha: 0,
+			y: "-40px",
+			ease: "Power4.inOut",
+		}, "<")
+		.to(aboutFullTitle, {
+			autoAlpha: 0,
+			ease: "Power4.inOut",
+		}, "<")
 		.call(changeContent, [titleOpen, elem, imageOpen, textOpen])
-		.to(aboutOpen, {
+		.to(imageOpen, {
+			y: "40px",
+			duration: "0s",
+		}, ">0")
+		.to(textOpen, {
+			y: "40px",
+			duration: "0s",
+		}, "<")
+		.to(imageOpen, {
 			autoAlpha: 1,
 			y: "0%",
 			ease: "Power4.inOut",
 		})
+		.to(aboutFullTitle, {
+			autoAlpha: 1,
+			ease: "Power4.inOut",
+		}, "<")
+		.to(textOpen, {
+			autoAlpha: 1,
+			y: "0%",
+			ease: "Power4.inOut",
+		}, "<")
 		about.style.display="none"
 		aboutOpen.style.display="flex"
 		// titleOpen.innerHTML = elem.alt
@@ -175,6 +198,7 @@ aboutOthers.forEach(elem =>{
 
 images.forEach(elem =>{
 	elem.addEventListener("click", function(e){
+		console.log("lll");
 		let imageAff = document.querySelectorAll(`.${elem.classList[1]}`)
 		imageAff[1].classList.toggle("chosenOne")
 		imageAff[2].classList.toggle("chosenOne")
@@ -200,8 +224,63 @@ images.forEach(elem =>{
 			y: "0%",
 			ease: "Power4.inOut",
 		})
-		// about.style.display="none"
-		// aboutOpen.style.display="flex"
+
+
+		// tl
+		// .set(about, {
+		// 	autoAlpha: 1,
+		// }, "switchtime")
+		// .set(aboutOpen, {
+		// 	autoAlpha: 0,
+		// }, "switchtime")
+		// .set(imageOpen, {
+		// 	autoAlpha: 0,
+		// 	y: "10%",
+		// 	ease: "Power4.inOut",
+		// }, "switchtime")
+		// .set(aboutFullTitle, {
+		// 	autoAlpha: 0,
+		// 	ease: "Power4.inOut",
+		// }, "switchtime")
+		
+		// .to(about, {
+		// 	autoAlpha: 0,
+		// 	duration: 0.4,
+		// }, "<")
+		// .to(about, {
+		// 	display: "none",
+		// 	duration: 0.4,
+		// }, "<")
+		// .to(aboutOpen, {
+		// 	display: "flex",
+		// 	autoAlpha: 1,
+		// 	duration: 0.4,
+		// }, ">")
+		// .set(textOpen, {
+		// 	autoAlpha: 0,
+		// 	y: "20%",
+		// 	ease: "Power4.inOut",
+		// }, "switchtime")
+		// .to(textOpen, {
+		// 	autoAlpha: 1,
+		// 	y: "0%",
+		// 	ease: "Power4.inOut",
+		// 	duration: 0.4,
+		// }, "<")
+		// .to(imageOpen, {
+		// 	autoAlpha: 1,
+		// 	y: "0%",
+		// 	ease: "Power4.inOut",
+		// 	duration: 0.4,
+		// }, "<")
+		// .to(aboutFullTitle, {
+		// 	autoAlpha: 1,
+		// 	ease: "Power4.inOut",
+		// 	duration: 0.4,
+		// }, "<")
+
+
+
 		titleOpen.innerHTML = elem.alt
 		let src = elem.src.replace("small", "large")
 		imageOpen.src = src

@@ -2,7 +2,7 @@ body {
   scrollbar-width: none;
 }
 body .container {
-  overflow-y: hidden;
+  height: 100vh;
 }
 body a {
   cursor: pointer;
@@ -19,6 +19,7 @@ header {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  border-top: #9E949C 1px solid;
 }
 .work_global #works {
   display: flex;
@@ -32,6 +33,7 @@ header {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-end;
+  min-width: 30vh;
   height: 86.52vh;
 }
 .work_global .work_project .project_link {
@@ -39,6 +41,10 @@ header {
   align-items: flex-end;
   height: 20vh;
   margin: 3.5vh 2vw 3vh 2.5vw;
+}
+.work_global .work_project .project_link .arrow_link {
+  width: 30px;
+  overflow: visible;
 }
 .work_global .work_project .project_link .project_name {
   font-size: 8vh;
@@ -62,17 +68,29 @@ header {
   margin-right: 20vw;
 }
 
-@media screen and (max-aspect-ratio: 9/15) {
-  .work_project {
+@media screen and (max-aspect-ratio: 9/14) {
+  .container {
+    overflow-y: hidden;
+  }
+  .container header {
+    position: fixed;
+  }
+  .container .work_global {
+    margin-top: 13.46vh;
+  }
+  .container .work_global .work_project {
     width: 83.9vw;
   }
-  .work_project img {
+  .container .work_global .work_project .project_link {
+    margin: 0 2vw;
+  }
+  .container .work_global .work_project img {
     -o-object-fit: contain;
        object-fit: contain;
     display: flex;
     height: auto !important;
   }
-  .work_project .blackk {
+  .container .work_global .work_project .blackk {
     width: 10vw;
   }
 }/*# sourceMappingURL=work.css.map */

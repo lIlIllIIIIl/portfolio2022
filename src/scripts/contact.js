@@ -11,6 +11,7 @@
 const click = document.querySelector('.click')
 const mail = document.querySelector(".contact_mail")
 const mailText = document.querySelector(".mail")
+const jsp = document.querySelector(".horizontal_blank2")
 
 let pointerPos = { x: 0, y: 0 }
 let pointerOffset = { x: 0, y: 0 }
@@ -35,7 +36,7 @@ mail.addEventListener("mouseover", e =>{
             click.textContent = "copied !";
             setTimeout(modText(), 5000);
         })
-            .catch(err => {
+        .catch(err => {
             console.log('Something went wrong.', err);
         })
     })

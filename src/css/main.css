@@ -170,6 +170,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   height: 13.48vh;
+  width: 83.9vw;
 }
 header .logoLink {
   width: -webkit-fit-content;
@@ -274,6 +275,10 @@ header .logoLink .headerLogoSvg {
   flex-direction: column;
 }
 
+.containerHome {
+  height: 110vh;
+}
+
 .container .outImages-container {
   transition-duration: 0.3s;
   position: absolute;
@@ -285,7 +290,7 @@ header .logoLink .headerLogoSvg {
   width: 120px;
   height: 162px;
   transition-duration: 0.3s;
-  opacity: 0;
+  opacity: 20;
   aspect-ratio: 119/161;
 }
 .container .outImages-container :hover {
@@ -512,6 +517,7 @@ header .logoLink .headerLogoSvg {
 
 .home_title {
   display: inline;
+  padding-top: 5px;
 }
 
 .home_arrow {
@@ -606,6 +612,9 @@ header .logoLink .headerLogoSvg {
   }
 }
 @media screen and (max-aspect-ratio: 3/4) {
+  .click {
+    display: none;
+  }
   .contact_intro .contact_text {
     width: 70vw;
   }
@@ -622,5 +631,8 @@ header .logoLink .headerLogoSvg {
   }
   div.contact_mail h1 {
     font-size: 46px;
+  }
+  .home_arrow {
+    height: 30px;
   }
 }/*# sourceMappingURL=main.css.map */
