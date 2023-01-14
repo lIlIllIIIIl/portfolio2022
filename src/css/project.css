@@ -156,6 +156,7 @@
   }
   .container .project_global .project_images .project_im {
     flex-direction: column;
+    aspect-ratio: auto;
     height: auto;
   }
   .container .project_global .project_images .project_im .project_image {
